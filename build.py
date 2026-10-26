@@ -23,6 +23,7 @@ NAV = [
     ("marques", "/marques", "Nos marques"),
     ("studio", "/studio", "Studio web"),
     ("conseil", "/conseil", "Conseil"),
+    ("eco", "/eco-responsable", "Éco-responsable"),
     ("devis", "/devis", "Devis"),
 ]
 
