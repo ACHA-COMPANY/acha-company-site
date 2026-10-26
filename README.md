@@ -28,6 +28,5 @@ Chaque modification poussée sur la branche principale met le site à jour autom
 
 ## À compléter avant la mise en ligne
 
-- Mentions légales : ajouter le numéro de TVA intracommunautaire quand il est attribué.
 - Adresse e-mail de contact réelle (aujourd'hui `contact@acha-company.fr`).
 - Logo définitif, si l'identité provisoire est remplacée.
