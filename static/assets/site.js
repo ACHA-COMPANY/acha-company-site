@@ -1,5 +1,7 @@
-// ACHA COMPANY : petites interactions du site (onglets, auto-diagnostic).
+// ACHA COMPANY : petites interactions du site (onglets, auto-diagnostic, apparitions, halo du haut de page).
 (function () {
+  document.documentElement.classList.add('js');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   // Onglets accessibles (flèches gauche/droite, Début/Fin)
   document.querySelectorAll('[data-tabs]').forEach(function (root) {
     var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
@@ -60,4 +62,25 @@
     root.addEventListener('change', update);
     update();
   });
+
+  // Apparition des blocs au défilement
+  var reveal = document.querySelectorAll('[data-reveal]');
+  if (reduce || !('IntersectionObserver' in window)) {
+    reveal.forEach(function (el) { el.classList.add('seen'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('seen'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    reveal.forEach(function (el) { io.observe(el); });
+  }
+
+  // Halo qui suit la souris dans le haut de page
+  var spot = document.querySelector('[data-spot]');
+  if (spot && !reduce && window.matchMedia('(pointer: fine)').matches) {
+    spot.addEventListener('pointermove', function (e) {
+      var r = spot.getBoundingClientRect();
+      spot.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      spot.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    });
+  }
 })();
