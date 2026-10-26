@@ -10,6 +10,7 @@ path: /studio          (adresse publique, facultatif)
 Lancer : python3 build.py
 """
 import datetime
+import hashlib
 import pathlib
 import re
 import shutil
@@ -50,6 +51,10 @@ def main():
         shutil.rmtree(OUT)
     shutil.copytree(ROOT / "static", OUT)
     year = str(datetime.date.today().year)
+    # Les fichiers de /assets/ sont gardés 7 jours en cache : on ajoute une empreinte
+    # de leur contenu à l'adresse pour que chaque nouvelle version soit rechargée.
+    assets = b"".join((ROOT / "static" / "assets" / f).read_bytes() for f in ("style.css", "site.js"))
+    version = hashlib.sha1(assets).hexdigest()[:10]
     for page in sorted((SRC / "pages").glob("*.html")):
         meta, body = parse(page.read_text(encoding="utf-8"))
         html = (layout
@@ -57,6 +62,7 @@ def main():
                 .replace("{{description}}", meta.get("description", ""))
                 .replace("{{nav}}", nav_html(meta.get("nav")))
                 .replace("{{year}}", year)
+                .replace("{{v}}", version)
                 .replace("{{content}}", body.strip()))
         (OUT / page.name).write_text(html, encoding="utf-8")
         print("ok", page.name)
