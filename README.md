@@ -1,13 +1,32 @@
 # Site ACHA COMPANY
 
-Site du groupe ACHA COMPANY : marques (dont VAPOLAB), studio web et conseil e-commerce.
+Site du groupe ACHA COMPANY : marques (dont Vapolab.fr), studio web et conseil e-commerce.
 C'est un site statique en HTML et CSS, assemblé par un petit script Python, sans dépendance à installer.
+
+## Espace admin
+
+www.acha-company.fr/admin (Decap CMS) permet de modifier sans code :
+
+- **Textes du site** : chaque texte de chaque page, plus le titre d'onglet et la description Google ;
+- **Partenaires** : les cartes de la page Éco-responsable (nom, description, logo, lien) ;
+- **Prix du simulateur** : tous les prix et durées de /devis.
+
+Connexion avec un compte GitHub qui a accès à ce dépôt. « Publier » enregistre la modification sur `main` et
+Netlify remet le site à jour en 1 à 2 minutes. Réglages : `static/admin/config.yml`.
+
+Mise en place (une seule fois) :
+
+1. GitHub, Settings > Developer settings > OAuth Apps > New OAuth App : page d'accueil `https://www.acha-company.fr`,
+   « Authorization callback URL » `https://api.netlify.com/auth/done`. Noter le Client ID et générer un Client secret.
+2. Netlify, Project configuration > Security > OAuth > Install provider : GitHub, coller le Client ID et le secret.
 
 ## Structure
 
-- `src/pages/` : une page par fichier. Le bloc `<!-- ... -->` en tête donne le titre, la description et le lien de menu actif.
+- `content/` : les textes (`textes/<page>.json`), les partenaires et les prix, modifiés par l'admin.
+  Dans les pages, `{{t:cle}}` est remplacé par le texte correspondant.
+- `src/pages/` : une page par fichier (la mise en page). Le bloc `<!-- ... -->` en tête donne le lien de menu actif.
 - `src/partials/layout.html` : l'en-tête, le menu et le pied de page communs à toutes les pages.
-- `static/assets/` : la feuille de style et le favicon, copiés tels quels.
+- `static/assets/` : la feuille de style, les scripts et le favicon, copiés tels quels. `static/admin/` : l'admin. `static/uploads/` : les images ajoutées depuis l'admin.
 - `build.py` : assemble le tout dans `public/`.
 
 ## Travailler en local

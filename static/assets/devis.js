@@ -1,53 +1,12 @@
 // ACHA COMPANY : simulateur de devis (page /devis).
 //
-// ===== TARIFS : c'est ici qu'on modifie les prix =====
-// Montants en euros hors taxes. « semaines » sert à estimer le délai.
-// « pour: 'ecom' » réserve une option aux boutiques en ligne ; « conseille: true » la coche d'office ;
-// « eco: true » range l'option dans le bloc éco-responsable ; un prix à 0 s'affiche « offert ».
+// Les prix viennent de content/tarifs.json (modifiable dans l'admin, rubrique « Prix du simulateur ») :
+// build.py les place dans la page sous le nom TARIFS. Montants en euros hors taxes ;
+// « semaines » sert à estimer le délai, « pour: 'ecom' » réserve une option aux boutiques en ligne,
+// « conseille » la coche d'office, « eco » la range dans le bloc éco-responsable, un prix à 0 s'affiche « offert ».
 // Repères marché relevés en octobre 2026 (La Fabrique du Net, Codeur.com, Freelance Solution) :
 // boutique Shopify sur thème par une agence < 5 000 €, sur-mesure ≈ 15 000 €, médiane TPE ≈ 7 000 € ;
 // freelance Shopify ≈ 170 €/jour ; audit e-commerce 2 000 à 4 000 € ; SEO e-commerce 1 500 à 4 000 €/mois.
-var TARIFS = {
-  tva: 0.20,
-  projets: [
-    { id: 'vitrine', nom: 'Site vitrine pour un magasin', detail: "Jusqu'à 6 pages, fiche Google, plan d'accès", prix: 1900, semaines: 2 },
-    { id: 'theme', nom: 'Boutique en ligne sur thème', detail: 'Shopify ou WooCommerce, thème adapté à votre marque', prix: 4500, semaines: 5, ecom: true },
-    { id: 'mesure', nom: 'Boutique en ligne sur-mesure', detail: 'Design unique, parcours d\'achat pensé pour la vape', prix: 9500, semaines: 8, ecom: true },
-    { id: 'refonte', nom: "Refonte d'une boutique existante", detail: 'Nouveau design et mise aux normes du secteur', prix: 3500, semaines: 4, ecom: true },
-    { id: 'aucun', nom: 'Pas de site, seulement du conseil', detail: 'Audit, plan de lancement ou accompagnement', prix: 0, semaines: 0 }
-  ],
-  catalogue: [
-    { id: 'c50', nom: "Jusqu'à 50 produits", prix: 0 },
-    { id: 'c200', nom: '51 à 200 produits', prix: 600, semaines: 1 },
-    { id: 'c500', nom: '201 à 500 produits', prix: 1400, semaines: 1 },
-    { id: 'c999', nom: 'Plus de 500 produits', prix: 2500, semaines: 2 }
-  ],
-  options: [
-    { id: 'age', nom: "Vérification d'âge intégrée", prix: 350, pour: 'ecom', conseille: true },
-    { id: 'paiement', nom: 'Paiement compatible vape + solution de secours', prix: 450, pour: 'ecom', conseille: true },
-    { id: 'fiches', nom: 'Fiches e-liquides conformes et filtres (nicotine, saveur, contenance)', prix: 400, pour: 'ecom', conseille: true },
-    { id: 'migration', nom: "Reprise du catalogue d'un ancien site", prix: 900, pour: 'ecom', semaines: 1 },
-    { id: 'seo', nom: 'Référencement de départ (structure, balises, pages marques)', prix: 900 },
-    { id: 'emails', nom: 'E-mails automatiques (bienvenue, panier abandonné, réassort)', prix: 650, pour: 'ecom' },
-    { id: 'fidelite', nom: 'Programme de fidélité et avis clients', prix: 500, pour: 'ecom' },
-    { id: 'logo', nom: 'Logo et charte graphique', prix: 1200, semaines: 1 },
-    { id: 'formation', nom: 'Formation à la prise en main (2 heures)', prix: 250 },
-    // options éco-responsables
-    { id: 'ecoconception', nom: 'Éco-conception poussée (pages légères, mode sombre)', prix: 300, eco: true },
-    { id: 'emballages', nom: 'Emballages recyclés et page de reprise des appareils usagés', prix: 250, pour: 'ecom', eco: true },
-    { id: 'partenaires', nom: 'Mise en relation avec nos partenaires éco-responsables', prix: 0, eco: true }
-  ],
-  conseil: [
-    { id: 'audit', nom: 'Audit de boutique vape', detail: 'Paiement, âge, fiches, référencement, tunnel de vente', prix: 1200 },
-    { id: 'lancement', nom: "Plan de lancement d'une marque", detail: 'Offre, prix, fournisseurs, calendrier', prix: 2500 }
-  ],
-  mensuel: [
-    { id: 'm0', nom: 'Pas de suivi', prix: 0 },
-    { id: 'maintenance', nom: 'Maintenance et sécurité', detail: 'Mises à jour, sauvegardes, petites corrections', prix: 89 },
-    { id: 'croissance', nom: 'Accompagnement croissance', detail: 'Maintenance + référencement et e-mails, une journée par mois', prix: 590 }
-  ]
-};
-// ===== fin des tarifs =====
 
 (function () {
   var root = document.querySelector('[data-devis]');

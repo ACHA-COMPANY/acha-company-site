@@ -1,0 +1,31 @@
+{
+  "titre_onglet": "Merci · ACHA COMPANY",
+  "description": "Votre demande a bien été envoyée.",
+  "textes": [
+    {
+      "id": "merci-001",
+      "zone": "Demande envoyée · Texte",
+      "texte": "Demande envoyée"
+    },
+    {
+      "id": "merci-002",
+      "zone": "Demande envoyée · Grand titre",
+      "texte": "Merci, nous avons bien reçu votre message."
+    },
+    {
+      "id": "merci-003",
+      "zone": "Demande envoyée · Texte",
+      "texte": "Nous revenons vers vous sous 48 heures ouvrées. En attendant, vous pouvez découvrir nos marques."
+    },
+    {
+      "id": "merci-004",
+      "zone": "Demande envoyée · Lien ou bouton",
+      "texte": "Voir nos marques"
+    },
+    {
+      "id": "merci-005",
+      "zone": "Demande envoyée · Lien ou bouton",
+      "texte": "Retour à l'accueil"
+    }
+  ]
+}

@@ -1,51 +1,47 @@
-<!--
-title: Contact · ACHA COMPANY
-description: Décrivez votre projet de boutique ou de marque de vape. Réponse sous 48 heures ouvrées.
--->
-  <section class="band contact" style="background:var(--surface)"><div class="in">
+<section class="band contact" style="background:var(--surface)"><div class="in">
     <div class="side">
-      <p class="label">Contact</p>
-      <h1 style="font-size:clamp(32px,4.4vw,56px);line-height:1.02;font-weight:800;font-stretch:112%;margin-top:12px">Un projet de boutique ou de marque de vape ?</h1>
-      <p>Décrivez-le en quelques lignes. Nous répondons sous 48 heures ouvrées avec une première piste et un ordre de prix.</p>
+      <p class="label">{{t:contact-001}}</p>
+      <h1 style="font-size:clamp(32px,4.4vw,56px);line-height:1.02;font-weight:800;font-stretch:112%;margin-top:12px">{{t:contact-002}}</h1>
+      <p>{{t:contact-003}}</p>
       <dl>
-        <div><dt>E-mail</dt><dd>contact@acha-company.fr</dd></div>
-        <div><dt>Basés en</dt><dd>France · rendez-vous en visio</dd></div>
+        <div><dt>{{t:contact-004}}</dt><dd>{{t:contact-005}}</dd></div>
+        <div><dt>{{t:contact-006}}</dt><dd>{{t:contact-007}}</dd></div>
       </dl>
     </div>
     <form name="contact" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="societe-web">
       <input type="hidden" name="form-name" value="contact">
-      <p class="hp"><label>Ne pas remplir <input name="societe-web" tabindex="-1" autocomplete="off"></label></p>
+      <p class="hp"><label>{{t:contact-008}} <input name="societe-web" tabindex="-1" autocomplete="off"></label></p>
       <div class="row2">
-        <label class="f" for="nom">Nom<input id="nom" name="nom" autocomplete="name" required placeholder="Camille Martin"></label>
-        <label class="f" for="mail">E-mail<input id="mail" name="email" type="email" autocomplete="email" required placeholder="camille@exemple.fr"></label>
+        <label class="f" for="nom">{{t:contact-009}}<input id="nom" name="nom" autocomplete="name" required placeholder="{{t:contact-010}}"></label>
+        <label class="f" for="mail">{{t:contact-011}}<input id="mail" name="email" type="email" autocomplete="email" required placeholder="{{t:contact-012}}"></label>
       </div>
-      <label class="f" for="tel">Téléphone (facultatif)<input id="tel" name="telephone" type="tel" autocomplete="tel" placeholder="06 12 34 56 78"></label>
+      <label class="f" for="tel">{{t:contact-013}}<input id="tel" name="telephone" type="tel" autocomplete="tel" placeholder="06 12 34 56 78"></label>
       <fieldset>
-        <legend>Votre besoin</legend>
+        <legend>{{t:contact-014}}</legend>
         <div class="chips">
-          <label><input type="radio" name="besoin" id="t1" value="Site vitrine magasin"><span>Site vitrine (magasin)</span></label>
-          <label><input type="radio" name="besoin" id="t2" value="Boutique vape en ligne" checked><span>Boutique vape en ligne</span></label>
-          <label><input type="radio" name="besoin" id="t3" value="Conseil"><span>Conseil</span></label>
-          <label><input type="radio" name="besoin" id="t4" value="Co-création de marque"><span>Co-création de marque</span></label>
+          <label><input type="radio" name="besoin" id="t1" value="Site vitrine magasin"><span>{{t:contact-015}}</span></label>
+          <label><input type="radio" name="besoin" id="t2" value="Boutique vape en ligne" checked><span>{{t:contact-016}}</span></label>
+          <label><input type="radio" name="besoin" id="t3" value="Conseil"><span>{{t:contact-017}}</span></label>
+          <label><input type="radio" name="besoin" id="t4" value="Co-création de marque"><span>{{t:contact-018}}</span></label>
         </div>
       </fieldset>
       <div class="f" style="display:grid;gap:6px;font-weight:600;font-size:14px">
-        <label for="budget">Budget envisagé</label>
+        <label for="budget">{{t:contact-019}}</label>
         <select id="budget" name="budget">
-          <option>Moins de 2 000 €</option>
-          <option>2 000 à 5 000 €</option>
-          <option>5 000 à 10 000 €</option>
-          <option>Plus de 10 000 €</option>
-          <option selected>Je ne sais pas encore</option>
+          <option>{{t:contact-020}}</option>
+          <option>{{t:contact-021}}</option>
+          <option>{{t:contact-022}}</option>
+          <option>{{t:contact-023}}</option>
+          <option selected>{{t:contact-024}}</option>
         </select>
       </div>
-      <label class="f" for="msg">Votre projet
-        <textarea id="msg" name="message" required placeholder="Ex. : j'ai deux magasins de vape à Lyon et je veux vendre nos e-liquides en ligne."></textarea>
+      <label class="f" for="msg">{{t:contact-025}}
+        <textarea id="msg" name="message" required placeholder="{{t:contact-026}}"></textarea>
       </label>
       <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink-2)">
         <input type="checkbox" name="consentement" value="oui" required style="width:auto;margin-top:3px">
-        <span>J'accepte qu'ACHA COMPANY utilise ces informations pour me répondre. Voir la <a href="/mentions-legales#confidentialite">politique de confidentialité</a>.</span>
+        <span>{{t:contact-027}} <a href="/mentions-legales#confidentialite">{{t:contact-028}}</a>.</span>
       </label>
-      <div><button class="btn primary" type="submit">Envoyer ma demande</button></div>
+      <div><button class="btn primary" type="submit">{{t:contact-029}}</button></div>
     </form>
   </div></section>

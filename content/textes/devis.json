@@ -1,0 +1,151 @@
+{
+  "titre_onglet": "Simulateur de devis · ACHA COMPANY",
+  "description": "Estimez en une minute le prix de votre site ou boutique de vape en ligne : création, options du secteur, conseil et suivi mensuel.",
+  "textes": [
+    {
+      "id": "devis-001",
+      "zone": "Simulateur de devis · Texte",
+      "texte": "Simulateur de devis"
+    },
+    {
+      "id": "devis-002",
+      "zone": "Simulateur de devis · Grand titre",
+      "texte": "Combien coûte votre boutique de vape en ligne ?"
+    },
+    {
+      "id": "devis-003",
+      "zone": "Simulateur de devis · Texte",
+      "texte": "Composez votre projet, le prix se calcule en direct. Vous recevez ensuite un devis précis sous 48 heures ouvrées."
+    },
+    {
+      "id": "devis-004",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "Le simulateur a besoin de JavaScript. Vous pouvez aussi"
+    },
+    {
+      "id": "devis-005",
+      "zone": "Votre estimation · Lien ou bouton",
+      "texte": "nous décrire votre projet"
+    },
+    {
+      "id": "devis-006",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "Votre projet"
+    },
+    {
+      "id": "devis-007",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "Taille du catalogue"
+    },
+    {
+      "id": "devis-008",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "Options"
+    },
+    {
+      "id": "devis-009",
+      "zone": "Votre estimation · Texte",
+      "texte": "Les trois premières sont cochées d'office : sans elles, une boutique de vape risque de ne pas pouvoir vendre."
+    },
+    {
+      "id": "devis-010",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "Options éco-responsables"
+    },
+    {
+      "id": "devis-011",
+      "zone": "Votre estimation · Texte",
+      "texte": "Facultatives : à vous de choisir. La mise en relation avec nos partenaires est offerte."
+    },
+    {
+      "id": "devis-012",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "Conseil"
+    },
+    {
+      "id": "devis-013",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "Suivi après la mise en ligne"
+    },
+    {
+      "id": "devis-014",
+      "zone": "Votre estimation · Texte",
+      "texte": "Votre estimation"
+    },
+    {
+      "id": "devis-015",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "HT"
+    },
+    {
+      "id": "devis-016",
+      "zone": "Votre estimation · Intitulé",
+      "texte": "Suivi"
+    },
+    {
+      "id": "devis-017",
+      "zone": "Votre estimation · Intitulé",
+      "texte": "Délai"
+    },
+    {
+      "id": "devis-018",
+      "zone": "Votre estimation · Texte",
+      "texte": "Estimation indicative, hors abonnement de la plateforme (Shopify, hébergement) et frais de paiement. Le devis final dépend de votre projet."
+    },
+    {
+      "id": "devis-019",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "Ne pas remplir"
+    },
+    {
+      "id": "devis-020",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "Nom"
+    },
+    {
+      "id": "devis-021",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "E-mail"
+    },
+    {
+      "id": "devis-022",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "Boutique ou marque (facultatif)"
+    },
+    {
+      "id": "devis-023",
+      "zone": "Votre estimation · Exemple dans un champ",
+      "texte": "Ex. : Vape Store Lyon"
+    },
+    {
+      "id": "devis-024",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "J'accepte qu'ACHA COMPANY utilise ces informations pour me répondre. Voir la"
+    },
+    {
+      "id": "devis-025",
+      "zone": "Votre estimation · Lien ou bouton",
+      "texte": "politique de confidentialité"
+    },
+    {
+      "id": "devis-026",
+      "zone": "Votre estimation · Bouton",
+      "texte": "Recevoir mon devis"
+    },
+    {
+      "id": "devis-027",
+      "zone": "Votre estimation · Bouton",
+      "texte": "Imprimer l'estimation"
+    },
+    {
+      "id": "devis-028",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "Estimation"
+    },
+    {
+      "id": "devis-029",
+      "zone": "Votre estimation · Petit texte",
+      "texte": "HT ↓"
+    }
+  ]
+}

@@ -119,7 +119,7 @@ nav.main a:hover { color: var(--ink); }
 .vapo { background: #faf3f0; color: #29211d; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; border: 2px solid #29211d; box-shadow: 5px 5px 0 #dfab83; }
 .vapo .top { background: #38302a; color: #fff; padding: 22px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 .vapo .wm { font: 800 30px/1 Montserrat, "Helvetica Neue", Arial, sans-serif; letter-spacing: .02em; }
-.vapo .wm i { font-style: normal; color: #fb4f75; }
+.vapo .wm i, .vapo .wm em { font-style: normal; color: #fb4f75; }
 .vapo .live { font: 700 11px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; background: #dfab83; color: #29211d; padding: 7px 10px; border-radius: 999px; }
 .vapo .tick { background: #dfab83; font: 800 11px/1 Montserrat, Arial, sans-serif; letter-spacing: .16em; padding: 8px 24px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .vapo .body { padding: 24px; display: grid; gap: 12px; flex: 1; }

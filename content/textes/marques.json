@@ -1,0 +1,131 @@
+{
+  "titre_onglet": "Nos marques · ACHA COMPANY",
+  "description": "Les boutiques de vape du groupe ACHA COMPANY, dont Vapolab.fr, et comment co-créer une marque vape avec nous.",
+  "textes": [
+    {
+      "id": "marques-001",
+      "zone": "ACHA Marques · Texte",
+      "texte": "ACHA Marques"
+    },
+    {
+      "id": "marques-002",
+      "zone": "ACHA Marques · Grand titre",
+      "texte": "Nos boutiques, notre terrain d'essai."
+    },
+    {
+      "id": "marques-003",
+      "zone": "ACHA Marques · Texte",
+      "texte": "Vapolab.fr est la boutique de vape du groupe. Chaque méthode que nous proposons à nos clients y a d'abord été testée."
+    },
+    {
+      "id": "marques-004",
+      "zone": "Marque n°1 · E-commerce · Petit texte",
+      "texte": "Vapo*lab*.fr"
+    },
+    {
+      "id": "marques-005",
+      "zone": "Marque n°1 · E-commerce · Petit texte",
+      "texte": "En ligne"
+    },
+    {
+      "id": "marques-006",
+      "zone": "Marque n°1 · E-commerce · Petit texte",
+      "texte": "E-LIQUIDES ✦ E-CIGARETTES ✦ CBD ✦ DIY"
+    },
+    {
+      "id": "marques-007",
+      "zone": "Marque n°1 · E-commerce · Texte",
+      "texte": "Marque n°1 · E-commerce"
+    },
+    {
+      "id": "marques-008",
+      "zone": "Marque n°1 · E-commerce · Texte",
+      "texte": "La boutique en ligne de vape du groupe : e-liquides, matériel, CBD et DIY, avec un ton complice et une mascotte, le scientifique du labo."
+    },
+    {
+      "id": "marques-009",
+      "zone": "Marque n°1 · E-commerce · Petit texte",
+      "texte": "E-LIQUIDES"
+    },
+    {
+      "id": "marques-010",
+      "zone": "Marque n°1 · E-commerce · Petit texte",
+      "texte": "MATÉRIEL"
+    },
+    {
+      "id": "marques-011",
+      "zone": "Marque n°1 · E-commerce · Petit texte",
+      "texte": "CBD"
+    },
+    {
+      "id": "marques-012",
+      "zone": "Marque n°1 · E-commerce · Petit texte",
+      "texte": "DIY"
+    },
+    {
+      "id": "marques-013",
+      "zone": "Marque n°1 · E-commerce · Petit texte",
+      "texte": "Vente interdite aux mineurs"
+    },
+    {
+      "id": "marques-014",
+      "zone": "Marque n°1 · E-commerce · Lien ou bouton",
+      "texte": "Vapolab.fr ↗"
+    },
+    {
+      "id": "marques-015",
+      "zone": "Marque n°1 · E-commerce · Sous-titre",
+      "texte": "Marque n°2"
+    },
+    {
+      "id": "marques-016",
+      "zone": "Marque n°1 · E-commerce · Texte",
+      "texte": "Emplacement prévu pour la prochaine enseigne vape du groupe."
+    },
+    {
+      "id": "marques-017",
+      "zone": "Marque n°1 · E-commerce · Texte",
+      "texte": "En préparation"
+    },
+    {
+      "id": "marques-018",
+      "zone": "Marque n°1 · E-commerce · Sous-titre",
+      "texte": "Votre marque ?"
+    },
+    {
+      "id": "marques-019",
+      "zone": "Marque n°1 · E-commerce · Texte",
+      "texte": "Vous fabriquez des e-liquides ou du matériel et cherchez un partenaire pour les vendre en ligne ? Parlons d'une co-création."
+    },
+    {
+      "id": "marques-020",
+      "zone": "Marque n°1 · E-commerce · Lien ou bouton",
+      "texte": "Proposer un projet →"
+    },
+    {
+      "id": "marques-021",
+      "zone": "Co-création · Texte",
+      "texte": "Co-création"
+    },
+    {
+      "id": "marques-022",
+      "zone": "Co-création · Titre",
+      "texte": "Vous apportez le produit, nous construisons la marque"
+    },
+    {
+      "id": "marques-023",
+      "zone": "Co-création · Texte",
+      "texte": "Vous fabriquez ou importez des e-liquides ou du matériel, et vous n'avez pas le temps de les vendre en ligne. Nous pouvons créer la marque et la boutique, gérer les ventes en ligne et partager les résultats. Les conditions se décident au cas par cas."
+    },
+    {
+      "id": "marques-024",
+      "zone": "Une gamme vape à lancer en ligne ?… · Titre",
+      "texte": "Une gamme vape à lancer en ligne ? Présentez-la nous."
+    },
+    {
+      "id": "marques-025",
+      "zone": "Une gamme vape à lancer en ligne ?… · Lien ou bouton",
+      "texte": "Proposer un projet"
+    }
+  ]
+}
