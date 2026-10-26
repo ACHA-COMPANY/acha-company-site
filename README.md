@@ -28,6 +28,6 @@ Chaque modification poussée sur la branche principale met le site à jour autom
 
 ## À compléter avant la mise en ligne
 
-- Mentions légales : forme juridique, capital, adresse du siège, SIREN, RCS, TVA, directeur de la publication (repérés en jaune dans `src/pages/mentions-legales.html`).
+- Mentions légales : ajouter le numéro de TVA intracommunautaire quand il est attribué.
 - Adresse e-mail de contact réelle (aujourd'hui `contact@acha-company.fr`).
 - Logo définitif, si l'identité provisoire est remplacée.
