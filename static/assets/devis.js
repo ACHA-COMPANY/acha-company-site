@@ -2,7 +2,8 @@
 //
 // ===== TARIFS : c'est ici qu'on modifie les prix =====
 // Montants en euros hors taxes. « semaines » sert à estimer le délai.
-// « pour: 'ecom' » réserve une option aux boutiques en ligne ; « conseille: true » la coche d'office.
+// « pour: 'ecom' » réserve une option aux boutiques en ligne ; « conseille: true » la coche d'office ;
+// « eco: true » range l'option dans le bloc éco-responsable ; un prix à 0 s'affiche « offert ».
 // Repères marché relevés en octobre 2026 (La Fabrique du Net, Codeur.com, Freelance Solution) :
 // boutique Shopify sur thème par une agence < 5 000 €, sur-mesure ≈ 15 000 €, médiane TPE ≈ 7 000 € ;
 // freelance Shopify ≈ 170 €/jour ; audit e-commerce 2 000 à 4 000 € ; SEO e-commerce 1 500 à 4 000 €/mois.
@@ -30,7 +31,11 @@ var TARIFS = {
     { id: 'emails', nom: 'E-mails automatiques (bienvenue, panier abandonné, réassort)', prix: 650, pour: 'ecom' },
     { id: 'fidelite', nom: 'Programme de fidélité et avis clients', prix: 500, pour: 'ecom' },
     { id: 'logo', nom: 'Logo et charte graphique', prix: 1200, semaines: 1 },
-    { id: 'formation', nom: 'Formation à la prise en main (2 heures)', prix: 250 }
+    { id: 'formation', nom: 'Formation à la prise en main (2 heures)', prix: 250 },
+    // options éco-responsables
+    { id: 'ecoconception', nom: 'Éco-conception poussée (pages légères, mode sombre)', prix: 300, eco: true },
+    { id: 'emballages', nom: 'Emballages recyclés et page de reprise des appareils usagés', prix: 250, pour: 'ecom', eco: true },
+    { id: 'partenaires', nom: 'Mise en relation avec nos partenaires éco-responsables', prix: 0, eco: true }
   ],
   conseil: [
     { id: 'audit', nom: 'Audit de boutique vape', detail: 'Paiement, âge, fiches, référencement, tunnel de vente', prix: 1200 },
@@ -52,7 +57,7 @@ var TARIFS = {
 
   function choice(type, name, item, checked) {
     var id = name + '-' + item.id;
-    var price = item.prix ? (type === 'radio' && name === 'mensuel' ? eur.format(item.prix) + ' / mois' : (name === 'catalogue' ? '+ ' : '') + eur.format(item.prix)) : (name === 'catalogue' ? 'inclus' : '');
+    var price = item.prix ? (type === 'radio' && name === 'mensuel' ? eur.format(item.prix) + ' / mois' : (name === 'catalogue' ? '+ ' : '') + eur.format(item.prix)) : (name === 'catalogue' ? 'inclus' : name === 'option' ? 'offert' : '');
     return '<label class="pick" for="' + id + '"' + (item.pour ? ' data-pour="' + item.pour + '"' : '') + '>' +
       '<input type="' + type + '" name="' + name + '" id="' + id + '" value="' + item.id + '"' + (checked ? ' checked' : '') + '>' +
       '<span class="box"><span class="t">' + item.nom + '</span>' + (item.detail ? '<span class="d">' + item.detail + '</span>' : '') +
@@ -60,7 +65,8 @@ var TARIFS = {
   }
   $('[data-list="projets"]').innerHTML = TARIFS.projets.map(function (p, i) { return choice('radio', 'projet', p, i === 1); }).join('');
   $('[data-list="catalogue"]').innerHTML = TARIFS.catalogue.map(function (p, i) { return choice('radio', 'catalogue', p, i === 0); }).join('');
-  $('[data-list="options"]').innerHTML = TARIFS.options.map(function (p) { return choice('checkbox', 'option', p, p.conseille); }).join('');
+  $('[data-list="options"]').innerHTML = TARIFS.options.filter(function (p) { return !p.eco; }).map(function (p) { return choice('checkbox', 'option', p, p.conseille); }).join('');
+  $('[data-list="eco"]').innerHTML = TARIFS.options.filter(function (p) { return p.eco; }).map(function (p) { return choice('checkbox', 'option', p, false); }).join('');
   $('[data-list="conseil"]').innerHTML = TARIFS.conseil.map(function (p) { return choice('checkbox', 'conseil', p, false); }).join('');
   $('[data-list="mensuel"]').innerHTML = TARIFS.mensuel.map(function (p, i) { return choice('radio', 'mensuel', p, i === 1); }).join('');
 
@@ -89,13 +95,14 @@ var TARIFS = {
     });
     $('[data-step="catalogue"]').hidden = !ecom;
     $('[data-step="options"]').hidden = !site;
+    $('[data-step="eco"]').hidden = !site;
     lastEcom = ecom;
 
     var lines = [], total = 0, weeks = 0;
-    function add(item, label) { if (!item || !item.prix) return; lines.push([label || item.nom, item.prix]); total += item.prix; weeks += item.semaines || 0; }
+    function add(item, label, keepFree) { if (!item || (!item.prix && !keepFree)) return; lines.push([label || item.nom, item.prix]); total += item.prix; weeks += item.semaines || 0; }
     add(projet);
     if (ecom) add(find(TARIFS.catalogue, val('catalogue')), 'Catalogue : ' + find(TARIFS.catalogue, val('catalogue')).nom.toLowerCase());
-    if (site) vals('option').forEach(function (id) { add(find(TARIFS.options, id)); });
+    if (site) vals('option').forEach(function (id) { add(find(TARIFS.options, id), null, true); });
     vals('conseil').forEach(function (id) { var c = find(TARIFS.conseil, id); add(c); weeks = Math.max(weeks, 2); });
     var mens = find(TARIFS.mensuel, val('mensuel'));
 
@@ -103,9 +110,9 @@ var TARIFS = {
     $('[data-ttc]').textContent = eur.format(Math.round(total * (1 + TARIFS.tva))) + ' TTC';
     $('[data-mensuel]').textContent = mens.prix ? eur.format(mens.prix) + ' HT / mois · ' + mens.nom.toLowerCase() : 'Aucun suivi mensuel';
     $('[data-delai]').textContent = weeks ? 'environ ' + weeks + ' semaine' + (weeks > 1 ? 's' : '') : '—';
-    $('[data-lines]').innerHTML = lines.length ? lines.map(function (l) { return '<li><span>' + l[0] + '</span><b>' + eur.format(l[1]) + '</b></li>'; }).join('') : '<li><span>Choisissez au moins une prestation.</span></li>';
+    $('[data-lines]').innerHTML = lines.length ? lines.map(function (l) { return '<li><span>' + l[0] + '</span><b>' + (l[1] ? eur.format(l[1]) : 'offert') + '</b></li>'; }).join('') : '<li><span>Choisissez au moins une prestation.</span></li>';
 
-    var recap = lines.map(function (l) { return '- ' + l[0] + ' : ' + eur.format(l[1]); }).join('\n') +
+    var recap = lines.map(function (l) { return '- ' + l[0] + ' : ' + (l[1] ? eur.format(l[1]) : 'offert'); }).join('\n') +
       '\nTotal : ' + eur.format(total) + ' HT (' + eur.format(Math.round(total * (1 + TARIFS.tva))) + ' TTC)' +
       '\nSuivi : ' + (mens.prix ? mens.nom + ', ' + eur.format(mens.prix) + ' HT / mois' : 'aucun') +
       '\nDélai estimé : ' + (weeks ? weeks + ' semaines' : '—');
