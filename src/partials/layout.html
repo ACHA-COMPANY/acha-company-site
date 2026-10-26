@@ -11,18 +11,17 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="mark" viewBox="0 0 34 34">
-      <rect x="0" y="0" width="16" height="16" rx="2" fill="var(--pine)"/>
-      <rect x="18" y="0" width="16" height="16" rx="2" fill="var(--saffron)"/>
-      <rect x="0" y="18" width="16" height="16" rx="2" fill="var(--ink)"/>
-      <rect x="18.75" y="18.75" width="14.5" height="14.5" rx="1.5" fill="none" stroke="var(--ink-2)" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <symbol id="mark" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="4" fill="var(--ink)"/>
+      <path d="M9 24 L16 8 L23 24" fill="none" stroke="var(--brass)" stroke-width="2.4" stroke-linecap="square" stroke-linejoin="miter"/>
+      <path d="M12.4 18.5 H19.6" stroke="var(--bg)" stroke-width="2"/>
     </symbol>
   </defs>
 </svg>
@@ -30,12 +29,12 @@
 <header class="bar"><div class="in">
   <a class="logo" href="/" aria-label="ACHA COMPANY, accueil">
     <svg aria-hidden="true"><use href="#mark"/></svg>
-    <div><b>ACHA</b><span>COMPANY</span></div>
+    <span class="wordmark"><b>ACHA</b><small>COMPANY</small></span>
   </a>
   <nav class="main" aria-label="Navigation principale">
 {{nav}}
   </nav>
-  <a class="btn primary" href="/contact">Parler d'un projet</a>
+  <a class="btn primary" href="/contact">Parler d'un projet <span class="arr" aria-hidden="true">→</span></a>
   <details class="menu">
     <summary>Menu</summary>
     <nav aria-label="Navigation mobile">
@@ -51,13 +50,14 @@
 
 <footer><div class="in">
   <div>
-    <a class="logo" href="/" aria-label="ACHA COMPANY, accueil"><svg aria-hidden="true"><use href="#mark"/></svg><div><b>ACHA</b><span>COMPANY</span></div></a>
-    <p style="color:var(--ink-2);margin-top:14px;max-width:28em">Studio e-commerce et conseil spécialisés dans la vape. Vente de produits du vapotage interdite aux mineurs.</p>
+    <a class="logo" href="/" aria-label="ACHA COMPANY, accueil"><svg aria-hidden="true"><use href="#mark"/></svg><span class="wordmark"><b>ACHA</b><small>COMPANY</small></span></a>
+    <p class="about">Studio e-commerce et conseil spécialisés dans la vape. Vente de produits du vapotage interdite aux mineurs.</p>
   </div>
   <div><h4>Groupe</h4><ul><li><a href="/#groupe">Qui sommes-nous</a></li><li><a href="/marques">Nos marques</a></li><li><a href="/contact">Nous contacter</a></li></ul></div>
   <div><h4>Services</h4><ul><li><a href="/studio">Studio web</a></li><li><a href="/conseil">Conseil vape</a></li><li><a href="/marques#co-creation">Co-création</a></li></ul></div>
-  <div><h4>Marques</h4><ul><li><a href="https://vapolab.fr" target="_blank" rel="noopener">VAPOLAB ↗</a></li><li style="color:var(--ink-2)">Marque n°2 · bientôt</li></ul></div>
+  <div><h4>Marques</h4><ul><li><a href="https://vapolab.fr" target="_blank" rel="noopener">VAPOLAB ↗</a></li><li class="muted">Marque n°2 · bientôt</li></ul></div>
   <div class="legal"><span>© {{year}} ACHA COMPANY · <a href="/mentions-legales">Mentions légales et confidentialité</a></span><span>Fait en France</span></div>
 </div></footer>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
