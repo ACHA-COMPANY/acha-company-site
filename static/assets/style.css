@@ -251,3 +251,11 @@ nav.main a[aria-current="page"] { color: var(--ink); text-decoration: underline;
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .err { color: #ff7a45; } }
 :root[data-theme="dark"] .err { color: #ff7a45; }
 .hp { position: absolute; left: -9999px; }
+
+/* contraintes du secteur */
+.rules { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.rule { border-top: 3px solid var(--saffron); padding-top: 18px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.rule h3 { font-size: 20px; font-weight: 800; font-stretch: 110%; }
+.rule p { color: var(--ink-2); font-size: 15px; }
+@media (max-width: 960px) { .rules { grid-template-columns: 1fr 1fr; gap: 28px 16px; } }
+@media (max-width: 560px) { .rules { grid-template-columns: 1fr; } }
