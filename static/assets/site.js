@@ -1,7 +1,5 @@
-// ACHA COMPANY : petites interactions du site (onglets, auto-diagnostic, checklist animée).
+// ACHA COMPANY : petites interactions du site (onglets, auto-diagnostic).
 (function () {
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   // Onglets accessibles (flèches gauche/droite, Début/Fin)
   document.querySelectorAll('[data-tabs]').forEach(function (root) {
     var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
@@ -54,7 +52,7 @@
       }
       verdict.setAttribute('data-level', level);
       verdict.textContent = text;
-      meter.style.background = level === 'risk' ? 'var(--risk)' : level === 'warn' ? 'var(--warn)' : level === 'ok' ? 'var(--ok)' : 'var(--ink)';
+      meter.style.background = level === 'risk' ? 'var(--risk)' : level === 'warn' ? 'var(--warn)' : level === 'ok' ? 'var(--ok)' : 'var(--saffron)';
       tips.innerHTML = '';
       var items = todo.length ? todo : [answered === qs.length ? 'Aucune priorité urgente. Un audit peut encore trouver des ventes à récupérer.' : 'Vos priorités s\'afficheront ici.'];
       items.forEach(function (t) { var li = document.createElement('li'); li.textContent = t; tips.appendChild(li); });
@@ -62,22 +60,4 @@
     root.addEventListener('change', update);
     update();
   });
-
-  // Checklist du haut de page : se coche une ligne après l'autre au chargement
-  var launch = document.querySelector('.launch');
-  if (launch && !reduce) {
-    var items = launch.querySelectorAll('li');
-    var count = launch.querySelector('header span');
-    var bar = launch.querySelector('.bar-p i');
-    items.forEach(function (li) { li.classList.remove('on'); });
-    bar.style.transform = 'scaleX(0)';
-    count.textContent = '0 / ' + items.length;
-    items.forEach(function (li, i) {
-      setTimeout(function () {
-        li.classList.add('on');
-        count.textContent = (i + 1) + ' / ' + items.length;
-        bar.style.transform = 'scaleX(' + ((i + 1) / items.length) + ')';
-      }, 500 + i * 550);
-    });
-  }
 })();
