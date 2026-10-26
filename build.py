@@ -23,6 +23,7 @@ NAV = [
     ("marques", "/marques", "Nos marques"),
     ("studio", "/studio", "Studio web"),
     ("conseil", "/conseil", "Conseil"),
+    ("devis", "/devis", "Devis"),
 ]
 
 
@@ -53,17 +54,17 @@ def main():
     year = str(datetime.date.today().year)
     # Les fichiers de /assets/ sont gardés 7 jours en cache : on ajoute une empreinte
     # de leur contenu à l'adresse pour que chaque nouvelle version soit rechargée.
-    assets = b"".join((ROOT / "static" / "assets" / f).read_bytes() for f in ("style.css", "site.js"))
+    assets = b"".join((ROOT / "static" / "assets" / f).read_bytes() for f in ("style.css", "site.js", "devis.js"))
     version = hashlib.sha1(assets).hexdigest()[:10]
     for page in sorted((SRC / "pages").glob("*.html")):
         meta, body = parse(page.read_text(encoding="utf-8"))
         html = (layout
+                .replace("{{content}}", body.strip())
                 .replace("{{title}}", meta.get("title", "ACHA COMPANY"))
                 .replace("{{description}}", meta.get("description", ""))
                 .replace("{{nav}}", nav_html(meta.get("nav")))
                 .replace("{{year}}", year)
-                .replace("{{v}}", version)
-                .replace("{{content}}", body.strip()))
+                .replace("{{v}}", version))
         (OUT / page.name).write_text(html, encoding="utf-8")
         print("ok", page.name)
 
