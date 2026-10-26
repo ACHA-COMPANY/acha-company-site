@@ -1,0 +1,50 @@
+<!--
+title: Contact · ACHA COMPANY
+description: Décrivez votre projet de site, de boutique en ligne ou de marque. Réponse sous 48 heures ouvrées.
+-->
+  <section class="band contact" style="background:var(--surface)"><div class="in">
+    <div class="side">
+      <p class="label">Contact</p>
+      <h1 style="font-size:clamp(32px,4.4vw,56px);line-height:1.02;font-weight:800;font-stretch:112%;margin-top:12px">Un projet de site, de boutique ou de marque ?</h1>
+      <p>Décrivez-le en quelques lignes. Nous répondons sous 48 heures ouvrées avec une première piste et un ordre de prix.</p>
+      <dl>
+        <div><dt>E-mail</dt><dd>contact@acha-company.fr</dd></div>
+        <div><dt>Basés en</dt><dd>France · rendez-vous en visio</dd></div>
+      </dl>
+    </div>
+    <form name="contact" method="POST" action="/merci" data-netlify="true" netlify-honeypot="societe-web">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hp"><label>Ne pas remplir <input name="societe-web" tabindex="-1" autocomplete="off"></label></p>
+      <div class="row2">
+        <label class="f" for="nom">Nom<input id="nom" name="nom" autocomplete="name" required placeholder="Camille Martin"></label>
+        <label class="f" for="mail">E-mail<input id="mail" name="email" type="email" autocomplete="email" required placeholder="camille@exemple.fr"></label>
+      </div>
+      <label class="f" for="tel">Téléphone (facultatif)<input id="tel" name="telephone" type="tel" autocomplete="tel" placeholder="06 12 34 56 78"></label>
+      <fieldset>
+        <legend>Votre besoin</legend>
+        <div class="chips">
+          <label><input type="radio" name="besoin" id="t1" value="Site vitrine"><span>Site vitrine</span></label>
+          <label><input type="radio" name="besoin" id="t2" value="Boutique en ligne" checked><span>Boutique en ligne</span></label>
+          <label><input type="radio" name="besoin" id="t3" value="Conseil"><span>Conseil</span></label>
+          <label><input type="radio" name="besoin" id="t4" value="Co-création de marque"><span>Co-création de marque</span></label>
+        </div>
+      </fieldset>
+      <label class="f" for="budget">Budget envisagé
+        <select id="budget" name="budget">
+          <option>Moins de 2 000 €</option>
+          <option>2 000 à 5 000 €</option>
+          <option>5 000 à 10 000 €</option>
+          <option>Plus de 10 000 €</option>
+          <option selected>Je ne sais pas encore</option>
+        </select>
+      </label>
+      <label class="f" for="msg">Votre projet
+        <textarea id="msg" name="message" required placeholder="Ex. : je vends des bougies artisanales sur les marchés et je veux ouvrir une boutique en ligne avant Noël."></textarea>
+      </label>
+      <label style="display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink-2)">
+        <input type="checkbox" name="consentement" value="oui" required style="width:auto;margin-top:3px">
+        <span>J'accepte qu'ACHA COMPANY utilise ces informations pour me répondre. Voir la <a href="/mentions-legales#confidentialite">politique de confidentialité</a>.</span>
+      </label>
+      <div><button class="btn primary" type="submit">Envoyer ma demande</button></div>
+    </form>
+  </div></section>
