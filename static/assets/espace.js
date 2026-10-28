@@ -30,6 +30,7 @@
     return el;
   }
   function show(view) { root.replaceChildren(view); window.scrollTo(0, 0); }
+  function req(label) { return h('span', {}, [label, h('span', { class: 'ec-req', 'aria-hidden': 'true', text: ' *' })]); }
   function field(label, attrs, hint) {
     return h('label', { class: 'f' }, [label, h('input', attrs), hint ? h('span', { class: 'ec-hint', text: hint }) : null]);
   }
@@ -138,7 +139,7 @@
       nom: h('input', { name: 'nom', autocomplete: 'family-name', required: true }),
       societe: h('input', { name: 'societe', autocomplete: 'organization', required: true }),
       siret: h('input', { name: 'siret', inputmode: 'numeric', autocomplete: 'off', required: true, placeholder: '14 chiffres' }),
-      telephone: h('input', { name: 'telephone', type: 'tel', autocomplete: 'tel' }),
+      telephone: h('input', { name: 'telephone', type: 'tel', autocomplete: 'tel', required: true, pattern: '[0-9 +\\(\\)\\.\\-]{10,20}', title: 'Numéro de téléphone (10 chiffres minimum)' }),
       email: h('input', { name: 'email', type: 'email', autocomplete: 'email', required: true }),
       password: h('input', { name: 'password', type: 'password', autocomplete: 'new-password', minlength: 8, required: true })
     };
@@ -176,12 +177,13 @@
         else show(viewCheckEmail(f.email.value.trim()));
       });
     } }, [
-      h('div', { class: 'ec-row2' }, [h('label', { class: 'f' }, ['Prénom', f.prenom]), h('label', { class: 'f' }, ['Nom', f.nom])]),
-      h('label', { class: 'f' }, ['SIRET de l\'entreprise', f.siret, check]),
-      h('label', { class: 'f' }, ['Raison sociale', f.societe]),
-      h('div', { class: 'ec-row2' }, [h('label', { class: 'f' }, ['E-mail professionnel', f.email]), h('label', { class: 'f' }, ['Téléphone (facultatif)', f.telephone])]),
-      h('label', { class: 'f' }, ['Mot de passe (8 caractères minimum)', f.password]),
+      h('div', { class: 'ec-row2' }, [h('label', { class: 'f' }, [req('Prénom'), f.prenom]), h('label', { class: 'f' }, [req('Nom'), f.nom])]),
+      h('label', { class: 'f' }, [req('SIRET de l\'entreprise'), f.siret, check]),
+      h('label', { class: 'f' }, [req('Raison sociale'), f.societe]),
+      h('div', { class: 'ec-row2' }, [h('label', { class: 'f' }, [req('E-mail professionnel'), f.email]), h('label', { class: 'f' }, [req('Téléphone'), f.telephone])]),
+      h('label', { class: 'f' }, [req('Mot de passe (8 caractères minimum)'), f.password]),
       h('label', { class: 'ec-consent' }, [consent, h('span', {}, ['Je certifie agir pour le compte de cette entreprise et j\'accepte qu\'ACHA COMPANY utilise ces informations pour gérer mon compte. Voir la ', h('a', { href: '/mentions-legales#confidentialite', text: 'politique de confidentialité' }), '.'])]),
+      h('p', { class: 'ec-hint' }, [h('span', { class: 'ec-req', 'aria-hidden': 'true', text: '*' }), ' Champs obligatoires']),
       err, btn
     ]);
     return h('div', { class: 'ec-split' }, [

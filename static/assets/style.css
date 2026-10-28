@@ -708,3 +708,4 @@ main { overflow-x: clip; }
 }
 .ec-actions .ec-refuse { flex: 1 1 100%; grid-template-columns: 1fr auto; margin-top: 0; }
 @media (max-width: 560px) { .ec-actions .ec-refuse { grid-template-columns: 1fr; } }
+.ec-req { color: var(--focus); font-weight: 700; }
