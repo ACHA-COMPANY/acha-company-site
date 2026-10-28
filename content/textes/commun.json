@@ -114,6 +114,11 @@
       "id": "commun-023",
       "zone": "Pied de page · Petit texte",
       "texte": "Fait en France"
+    },
+    {
+      "id": "commun-024",
+      "zone": "Pied de page · Lien ou bouton",
+      "texte": "Espace admin"
     }
   ]
 }
