@@ -1,51 +1,50 @@
 <!--
-title: Simulateur de devis · ACHA COMPANY
-description: Estimez en une minute le prix de votre site ou boutique de vape en ligne : création, options du secteur, conseil et suivi mensuel.
 nav: devis
 -->
-  <section class="band page-hero devis-hero"><div class="in">
-    <p class="label">Simulateur de devis</p>
-    <h1>Combien coûte votre boutique de vape en ligne ?</h1>
-    <p class="lead">Composez votre projet, le prix se calcule en direct. Vous recevez ensuite un devis précis sous 48 heures ouvrées.</p>
+<section class="band page-hero devis-hero"><div class="in">
+    <p class="label">{{t:devis-001}}</p>
+    <h1>{{t:devis-002}}</h1>
+    <p class="lead">{{t:devis-003}}</p>
   </div></section>
 
   <section class="band devis-band"><div class="in">
-    <noscript><p class="lead">Le simulateur a besoin de JavaScript. Vous pouvez aussi <a href="/contact">nous décrire votre projet</a>.</p></noscript>
+    <noscript><p class="lead">{{t:devis-004}} <a href="/contact">{{t:devis-005}}</a>.</p></noscript>
     <div class="devis" data-devis hidden>
       <div class="steps-col">
-        <fieldset class="dstep"><legend><span>01</span>Votre projet</legend><div class="picks cols2" data-list="projets"></div></fieldset>
-        <fieldset class="dstep" data-step="catalogue"><legend><span>02</span>Taille du catalogue</legend><div class="picks cols4" data-list="catalogue"></div></fieldset>
-        <fieldset class="dstep" data-step="options"><legend><span>03</span>Options</legend><p class="hint">Les trois premières sont cochées d'office : sans elles, une boutique de vape risque de ne pas pouvoir vendre.</p><div class="picks cols2" data-list="options"></div></fieldset>
-        <fieldset class="dstep eco-step" data-step="eco"><legend><span>04</span>Options éco-responsables</legend><p class="hint">Facultatives : à vous de choisir. La mise en relation avec nos partenaires est offerte.</p><div class="picks cols2" data-list="eco"></div></fieldset>
-        <fieldset class="dstep"><legend><span>05</span>Conseil</legend><div class="picks cols2" data-list="conseil"></div></fieldset>
-        <fieldset class="dstep"><legend><span>06</span>Suivi après la mise en ligne</legend><div class="picks cols3" data-list="mensuel"></div></fieldset>
+        <fieldset class="dstep"><legend><span>01</span>{{t:devis-006}}</legend><div class="picks cols2" data-list="projets"></div></fieldset>
+        <fieldset class="dstep" data-step="catalogue"><legend><span>02</span>{{t:devis-007}}</legend><div class="picks cols4" data-list="catalogue"></div></fieldset>
+        <fieldset class="dstep" data-step="options"><legend><span>03</span>{{t:devis-008}}</legend><p class="hint">{{t:devis-009}}</p><div class="picks cols2" data-list="options"></div></fieldset>
+        <fieldset class="dstep eco-step" data-step="eco"><legend><span>04</span>{{t:devis-010}}</legend><p class="hint">{{t:devis-011}}</p><div class="picks cols2" data-list="eco"></div></fieldset>
+        <fieldset class="dstep"><legend><span>05</span>{{t:devis-012}}</legend><div class="picks cols2" data-list="conseil"></div></fieldset>
+        <fieldset class="dstep"><legend><span>06</span>{{t:devis-013}}</legend><div class="picks cols3" data-list="mensuel"></div></fieldset>
       </div>
 
       <aside class="ticket" id="estimation" aria-live="polite">
-        <p class="label">Votre estimation</p>
-        <p class="total"><b data-total>0 €</b><span>HT</span></p>
+        <p class="label">{{t:devis-014}}</p>
+        <p class="total"><b data-total>0 €</b><span>{{t:devis-015}}</span></p>
         <p class="ttc" data-ttc></p>
         <ul class="lines" data-lines></ul>
         <dl>
-          <div><dt>Suivi</dt><dd data-mensuel></dd></div>
-          <div><dt>Délai</dt><dd data-delai></dd></div>
+          <div><dt>{{t:devis-016}}</dt><dd data-mensuel></dd></div>
+          <div><dt>{{t:devis-017}}</dt><dd data-delai></dd></div>
         </dl>
-        <p class="note">Estimation indicative, hors abonnement de la plateforme (Shopify, hébergement) et frais de paiement. Le devis final dépend de votre projet.</p>
+        <p class="note">{{t:devis-018}}</p>
 
         <form name="devis" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="societe-web">
           <input type="hidden" name="form-name" value="devis">
-          <p class="hp"><label>Ne pas remplir <input name="societe-web" tabindex="-1" autocomplete="off"></label></p>
+          <p class="hp"><label>{{t:devis-019}} <input name="societe-web" tabindex="-1" autocomplete="off"></label></p>
           <textarea name="recap" hidden></textarea>
           <input type="hidden" name="total">
-          <label class="f" for="d-nom">Nom<input id="d-nom" name="nom" autocomplete="name" required></label>
-          <label class="f" for="d-mail">E-mail<input id="d-mail" name="email" type="email" autocomplete="email" required></label>
-          <label class="f" for="d-shop">Boutique ou marque (facultatif)<input id="d-shop" name="boutique" placeholder="Ex. : Vape Store Lyon"></label>
-          <label class="consent"><input type="checkbox" name="consentement" value="oui" required><span>J'accepte qu'ACHA COMPANY utilise ces informations pour me répondre. Voir la <a href="/mentions-legales#confidentialite">politique de confidentialité</a>.</span></label>
-          <button class="btn primary" type="submit">Recevoir mon devis <span aria-hidden="true">→</span></button>
-          <button class="btn ghost" type="button" data-print>Imprimer l'estimation</button>
+          <label class="f" for="d-nom">{{t:devis-020}}<input id="d-nom" name="nom" autocomplete="name" required></label>
+          <label class="f" for="d-mail">{{t:devis-021}}<input id="d-mail" name="email" type="email" autocomplete="email" required></label>
+          <label class="f" for="d-shop">{{t:devis-022}}<input id="d-shop" name="boutique" placeholder="{{t:devis-023}}"></label>
+          <label class="consent"><input type="checkbox" name="consentement" value="oui" required><span>{{t:devis-024}} <a href="/mentions-legales#confidentialite">{{t:devis-025}}</a>.</span></label>
+          <button class="btn primary" type="submit">{{t:devis-026}} <span aria-hidden="true">→</span></button>
+          <button class="btn ghost" type="button" data-print>{{t:devis-027}}</button>
         </form>
       </aside>
-      <a class="mini" href="#estimation"><span>Estimation</span><b data-mini>0 €</b><span>HT ↓</span></a>
+      <a class="mini" href="#estimation"><span>{{t:devis-028}}</span><b data-mini>0 €</b><span>{{t:devis-029}}</span></a>
     </div>
   </div></section>
+<script>var TARIFS = {{tarifs}};</script>
 <script src="/assets/devis.js?v={{v}}" defer></script>

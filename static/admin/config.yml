@@ -1,0 +1,303 @@
+# Espace admin du site : www.acha-company.fr/admin
+# Connexion avec un compte GitHub qui a accès au dépôt ACHA-COMPANY/acha-company-site.
+# Chaque « Publier » enregistre la modification sur la branche main : Netlify remet le site à jour en 1 à 2 minutes.
+backend:
+  name: github
+  repo: ACHA-COMPANY/acha-company-site
+  branch: main
+  commit_messages:
+    update: "Admin : mise à jour de « {{slug}} »"
+    uploadMedia: "Admin : ajout de l'image {{path}}"
+    deleteMedia: "Admin : suppression de l'image {{path}}"
+
+locale: fr
+site_url: https://www.acha-company.fr
+display_url: https://www.acha-company.fr
+logo_url: /assets/favicon.svg
+media_folder: static/uploads
+public_folder: /uploads
+
+collections:
+  - name: partenaires
+    label: Partenaires
+    editor: { preview: false }
+    files:
+      - name: partenaires
+        label: Partenaires éco-responsables
+        file: content/partenaires.json
+        fields:
+          - label: Partenaires
+            name: partenaires
+            widget: list
+            collapsed: false
+            summary: "{{fields.categorie}} · {{fields.nom}}"
+            hint: "Une carte par partenaire sur la page Éco-responsable. Laissez le nom vide pour afficher « Partenaire à venir »."
+            fields:
+              - { label: Catégorie, name: categorie, widget: string, hint: "Ex. : Hébergement, Emballages, Logistique, Collecte et recyclage" }
+              - { label: Nom du partenaire, name: nom, widget: string, required: false }
+              - { label: Ce qu'il apporte, name: description, widget: text }
+              - { label: Logo, name: logo, widget: image, required: false, hint: "Facultatif. Remplace l'icône de la carte." }
+              - { label: Site du partenaire, name: lien, widget: string, required: false, hint: "Adresse complète, ex. : https://exemple.fr" }
+
+  - name: prix
+    label: Prix du simulateur
+    editor: { preview: false }
+    files:
+      - name: tarifs
+        label: Prix du simulateur de devis
+        file: content/tarifs.json
+        fields:
+          - { label: "TVA (%)", name: tva, widget: number, value_type: int, min: 0, max: 100 }
+          - label: "Étape 1 · Projets"
+            name: projets
+            widget: list
+            summary: "{{fields.nom}} · {{fields.prix}} €"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden, required: false }
+              - { label: Nom, name: nom, widget: string }
+              - { label: Détail, name: detail, widget: string, required: false }
+              - { label: "Prix HT (€)", name: prix, widget: number, value_type: int, min: 0 }
+              - { label: "Durée (semaines)", name: semaines, widget: number, value_type: int, min: 0, default: 0 }
+              - { label: "Boutique en ligne (affiche le catalogue et les options de boutique)", name: ecom, widget: boolean, default: false }
+          - label: "Étape 2 · Taille du catalogue"
+            name: catalogue
+            widget: list
+            summary: "{{fields.nom}} · + {{fields.prix}} €"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden, required: false }
+              - { label: Nom, name: nom, widget: string }
+              - { label: "Prix HT en plus (€)", name: prix, widget: number, value_type: int, min: 0 }
+              - { label: "Semaines en plus", name: semaines, widget: number, value_type: int, min: 0, default: 0 }
+          - label: "Étapes 3 et 4 · Options"
+            name: options
+            widget: list
+            summary: "{{fields.nom}} · {{fields.prix}} €"
+            hint: "Un prix à 0 s'affiche « offert »."
+            fields:
+              - { label: Identifiant, name: id, widget: hidden, required: false }
+              - { label: Nom, name: nom, widget: string }
+              - { label: "Prix HT (€)", name: prix, widget: number, value_type: int, min: 0 }
+              - { label: "Semaines en plus", name: semaines, widget: number, value_type: int, min: 0, default: 0 }
+              - { label: Réservée à, name: pour, widget: select, default: "", options: [ { label: "Tous les projets", value: "" }, { label: "Boutiques en ligne seulement", value: "ecom" } ] }
+              - { label: Cochée d'office, name: conseille, widget: boolean, default: false }
+              - { label: "Option éco-responsable (étape 4)", name: eco, widget: boolean, default: false }
+          - label: "Étape 5 · Conseil"
+            name: conseil
+            widget: list
+            summary: "{{fields.nom}} · {{fields.prix}} €"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden, required: false }
+              - { label: Nom, name: nom, widget: string }
+              - { label: Détail, name: detail, widget: string, required: false }
+              - { label: "Prix HT (€)", name: prix, widget: number, value_type: int, min: 0 }
+          - label: "Étape 6 · Suivi mensuel"
+            name: mensuel
+            widget: list
+            summary: "{{fields.nom}} · {{fields.prix}} € / mois"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden, required: false }
+              - { label: Nom, name: nom, widget: string }
+              - { label: Détail, name: detail, widget: string, required: false }
+              - { label: "Prix HT par mois (€)", name: prix, widget: number, value_type: int, min: 0 }
+
+  - name: textes
+    label: Textes du site
+    description: "Tous les textes, page par page. Mise en forme : *italique*, **gras**, ==surligné==. Un retour à la ligne crée un saut de ligne."
+    editor: { preview: false }
+    files:
+      - name: "commun"
+        label: "Menu et pied de page (toutes les pages)"
+        file: content/textes/commun.json
+        fields:
+          - label: Textes
+            name: textes
+            widget: list
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            collapsed: true
+            summary: "{{fields.zone}} — {{fields.texte}}"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden }
+              - { label: Emplacement, name: zone, widget: hidden }
+              - { label: Texte, name: texte, widget: text }
+      - name: "index"
+        label: "Accueil"
+        file: content/textes/index.json
+        fields:
+          - { label: "Titre de l'onglet", name: titre_onglet, widget: string }
+          - { label: Description pour Google, name: description, widget: text }
+          - label: Textes
+            name: textes
+            widget: list
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            collapsed: true
+            summary: "{{fields.zone}} — {{fields.texte}}"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden }
+              - { label: Emplacement, name: zone, widget: hidden }
+              - { label: Texte, name: texte, widget: text }
+      - name: "studio"
+        label: "Studio web"
+        file: content/textes/studio.json
+        fields:
+          - { label: "Titre de l'onglet", name: titre_onglet, widget: string }
+          - { label: Description pour Google, name: description, widget: text }
+          - label: Textes
+            name: textes
+            widget: list
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            collapsed: true
+            summary: "{{fields.zone}} — {{fields.texte}}"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden }
+              - { label: Emplacement, name: zone, widget: hidden }
+              - { label: Texte, name: texte, widget: text }
+      - name: "conseil"
+        label: "Conseil"
+        file: content/textes/conseil.json
+        fields:
+          - { label: "Titre de l'onglet", name: titre_onglet, widget: string }
+          - { label: Description pour Google, name: description, widget: text }
+          - label: Textes
+            name: textes
+            widget: list
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            collapsed: true
+            summary: "{{fields.zone}} — {{fields.texte}}"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden }
+              - { label: Emplacement, name: zone, widget: hidden }
+              - { label: Texte, name: texte, widget: text }
+      - name: "marques"
+        label: "Nos marques"
+        file: content/textes/marques.json
+        fields:
+          - { label: "Titre de l'onglet", name: titre_onglet, widget: string }
+          - { label: Description pour Google, name: description, widget: text }
+          - label: Textes
+            name: textes
+            widget: list
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            collapsed: true
+            summary: "{{fields.zone}} — {{fields.texte}}"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden }
+              - { label: Emplacement, name: zone, widget: hidden }
+              - { label: Texte, name: texte, widget: text }
+      - name: "eco-responsable"
+        label: "Éco-responsable"
+        file: content/textes/eco-responsable.json
+        fields:
+          - { label: "Titre de l'onglet", name: titre_onglet, widget: string }
+          - { label: Description pour Google, name: description, widget: text }
+          - label: Textes
+            name: textes
+            widget: list
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            collapsed: true
+            summary: "{{fields.zone}} — {{fields.texte}}"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden }
+              - { label: Emplacement, name: zone, widget: hidden }
+              - { label: Texte, name: texte, widget: text }
+      - name: "devis"
+        label: "Simulateur de devis (textes)"
+        file: content/textes/devis.json
+        fields:
+          - { label: "Titre de l'onglet", name: titre_onglet, widget: string }
+          - { label: Description pour Google, name: description, widget: text }
+          - label: Textes
+            name: textes
+            widget: list
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            collapsed: true
+            summary: "{{fields.zone}} — {{fields.texte}}"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden }
+              - { label: Emplacement, name: zone, widget: hidden }
+              - { label: Texte, name: texte, widget: text }
+      - name: "contact"
+        label: "Contact"
+        file: content/textes/contact.json
+        fields:
+          - { label: "Titre de l'onglet", name: titre_onglet, widget: string }
+          - { label: Description pour Google, name: description, widget: text }
+          - label: Textes
+            name: textes
+            widget: list
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            collapsed: true
+            summary: "{{fields.zone}} — {{fields.texte}}"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden }
+              - { label: Emplacement, name: zone, widget: hidden }
+              - { label: Texte, name: texte, widget: text }
+      - name: "merci"
+        label: "Page de remerciement"
+        file: content/textes/merci.json
+        fields:
+          - { label: "Titre de l'onglet", name: titre_onglet, widget: string }
+          - { label: Description pour Google, name: description, widget: text }
+          - label: Textes
+            name: textes
+            widget: list
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            collapsed: true
+            summary: "{{fields.zone}} — {{fields.texte}}"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden }
+              - { label: Emplacement, name: zone, widget: hidden }
+              - { label: Texte, name: texte, widget: text }
+      - name: "mentions-legales"
+        label: "Mentions légales"
+        file: content/textes/mentions-legales.json
+        fields:
+          - { label: "Titre de l'onglet", name: titre_onglet, widget: string }
+          - { label: Description pour Google, name: description, widget: text }
+          - label: Textes
+            name: textes
+            widget: list
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            collapsed: true
+            summary: "{{fields.zone}} — {{fields.texte}}"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden }
+              - { label: Emplacement, name: zone, widget: hidden }
+              - { label: Texte, name: texte, widget: text }
+      - name: "404"
+        label: "Page introuvable (404)"
+        file: content/textes/404.json
+        fields:
+          - { label: "Titre de l'onglet", name: titre_onglet, widget: string }
+          - { label: Description pour Google, name: description, widget: text }
+          - label: Textes
+            name: textes
+            widget: list
+            allow_add: false
+            allow_remove: false
+            allow_reorder: false
+            collapsed: true
+            summary: "{{fields.zone}} — {{fields.texte}}"
+            fields:
+              - { label: Identifiant, name: id, widget: hidden }
+              - { label: Emplacement, name: zone, widget: hidden }
+              - { label: Texte, name: texte, widget: text }

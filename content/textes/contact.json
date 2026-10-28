@@ -1,0 +1,151 @@
+{
+  "titre_onglet": "Contact · ACHA COMPANY",
+  "description": "Décrivez votre projet de boutique ou de marque de vape. Réponse sous 48 heures ouvrées.",
+  "textes": [
+    {
+      "id": "contact-001",
+      "zone": "Contact · Texte",
+      "texte": "Contact"
+    },
+    {
+      "id": "contact-002",
+      "zone": "Contact · Grand titre",
+      "texte": "Un projet de boutique ou de marque de vape ?"
+    },
+    {
+      "id": "contact-003",
+      "zone": "Contact · Texte",
+      "texte": "Décrivez-le en quelques lignes. Nous répondons sous 48 heures ouvrées avec une première piste et un ordre de prix."
+    },
+    {
+      "id": "contact-004",
+      "zone": "Contact · Intitulé",
+      "texte": "E-mail"
+    },
+    {
+      "id": "contact-005",
+      "zone": "Contact · Info",
+      "texte": "contact@acha-company.fr"
+    },
+    {
+      "id": "contact-006",
+      "zone": "Contact · Intitulé",
+      "texte": "Basés en"
+    },
+    {
+      "id": "contact-007",
+      "zone": "Contact · Info",
+      "texte": "France · rendez-vous en visio"
+    },
+    {
+      "id": "contact-008",
+      "zone": "Contact · Petit texte",
+      "texte": "Ne pas remplir"
+    },
+    {
+      "id": "contact-009",
+      "zone": "Contact · Petit texte",
+      "texte": "Nom"
+    },
+    {
+      "id": "contact-010",
+      "zone": "Contact · Exemple dans un champ",
+      "texte": "Camille Martin"
+    },
+    {
+      "id": "contact-011",
+      "zone": "Contact · Petit texte",
+      "texte": "E-mail"
+    },
+    {
+      "id": "contact-012",
+      "zone": "Contact · Exemple dans un champ",
+      "texte": "camille@exemple.fr"
+    },
+    {
+      "id": "contact-013",
+      "zone": "Contact · Petit texte",
+      "texte": "Téléphone (facultatif)"
+    },
+    {
+      "id": "contact-014",
+      "zone": "Contact · Étape",
+      "texte": "Votre besoin"
+    },
+    {
+      "id": "contact-015",
+      "zone": "Contact · Petit texte",
+      "texte": "Site vitrine (magasin)"
+    },
+    {
+      "id": "contact-016",
+      "zone": "Contact · Petit texte",
+      "texte": "Boutique vape en ligne"
+    },
+    {
+      "id": "contact-017",
+      "zone": "Contact · Petit texte",
+      "texte": "Conseil"
+    },
+    {
+      "id": "contact-018",
+      "zone": "Contact · Petit texte",
+      "texte": "Co-création de marque"
+    },
+    {
+      "id": "contact-019",
+      "zone": "Contact · Champ",
+      "texte": "Budget envisagé"
+    },
+    {
+      "id": "contact-020",
+      "zone": "Contact · Choix",
+      "texte": "Moins de 2 000 €"
+    },
+    {
+      "id": "contact-021",
+      "zone": "Contact · Choix",
+      "texte": "2 000 à 5 000 €"
+    },
+    {
+      "id": "contact-022",
+      "zone": "Contact · Choix",
+      "texte": "5 000 à 10 000 €"
+    },
+    {
+      "id": "contact-023",
+      "zone": "Contact · Choix",
+      "texte": "Plus de 10 000 €"
+    },
+    {
+      "id": "contact-024",
+      "zone": "Contact · Choix",
+      "texte": "Je ne sais pas encore"
+    },
+    {
+      "id": "contact-025",
+      "zone": "Contact · Petit texte",
+      "texte": "Votre projet"
+    },
+    {
+      "id": "contact-026",
+      "zone": "Contact · Exemple dans un champ",
+      "texte": "Ex. : j'ai deux magasins de vape à Lyon et je veux vendre nos e-liquides en ligne."
+    },
+    {
+      "id": "contact-027",
+      "zone": "Contact · Petit texte",
+      "texte": "J'accepte qu'ACHA COMPANY utilise ces informations pour me répondre. Voir la"
+    },
+    {
+      "id": "contact-028",
+      "zone": "Contact · Lien ou bouton",
+      "texte": "politique de confidentialité"
+    },
+    {
+      "id": "contact-029",
+      "zone": "Contact · Bouton",
+      "texte": "Envoyer ma demande"
+    }
+  ]
+}

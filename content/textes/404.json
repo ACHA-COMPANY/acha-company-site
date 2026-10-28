@@ -1,0 +1,31 @@
+{
+  "titre_onglet": "Page introuvable · ACHA COMPANY",
+  "description": "Cette page n'existe pas ou a été déplacée.",
+  "textes": [
+    {
+      "id": "404-001",
+      "zone": "Erreur 404 · Texte",
+      "texte": "Erreur 404"
+    },
+    {
+      "id": "404-002",
+      "zone": "Erreur 404 · Grand titre",
+      "texte": "Cette page n'existe pas, ou plus."
+    },
+    {
+      "id": "404-003",
+      "zone": "Erreur 404 · Texte",
+      "texte": "Le lien est peut-être ancien. Repartez de l'accueil ou écrivez-nous."
+    },
+    {
+      "id": "404-004",
+      "zone": "Erreur 404 · Lien ou bouton",
+      "texte": "Retour à l'accueil"
+    },
+    {
+      "id": "404-005",
+      "zone": "Erreur 404 · Lien ou bouton",
+      "texte": "Nous contacter"
+    }
+  ]
+}

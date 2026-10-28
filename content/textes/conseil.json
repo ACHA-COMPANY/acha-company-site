@@ -1,0 +1,156 @@
+{
+  "titre_onglet": "Conseil e-commerce vape · Audit, lancement et acquisition · ACHA COMPANY",
+  "description": "Conseil pour les boutiques et marques de vape : audit, plan de lancement et acquisition sans publicité, par l'équipe qui gère Vapolab.fr.",
+  "textes": [
+    {
+      "id": "conseil-001",
+      "zone": "ACHA Conseil · Pour les boutiques et… · Texte",
+      "texte": "ACHA Conseil · Pour les boutiques et marques de vape"
+    },
+    {
+      "id": "conseil-002",
+      "zone": "ACHA Conseil · Pour les boutiques et… · Grand titre",
+      "texte": "Votre boutique de vape stagne ? On trouve pourquoi, puis on le corrige."
+    },
+    {
+      "id": "conseil-003",
+      "zone": "ACHA Conseil · Pour les boutiques et… · Texte",
+      "texte": "Nous gérons Vapolab.fr au quotidien. Nous savons où se perdent les ventes dans la vape : une vérification d'âge qui fait fuir, un paiement refusé, une fiche e-liquide incomplète, une boutique invisible sur Google."
+    },
+    {
+      "id": "conseil-004",
+      "zone": "ACHA Conseil · Pour les boutiques et… · Lien ou bouton",
+      "texte": "Réserver un appel"
+    },
+    {
+      "id": "conseil-005",
+      "zone": "Accompagnements · Texte",
+      "texte": "Accompagnements"
+    },
+    {
+      "id": "conseil-006",
+      "zone": "Accompagnements · Titre",
+      "texte": "Trois missions selon où vous en êtes"
+    },
+    {
+      "id": "conseil-007",
+      "zone": "Accompagnements · Texte",
+      "texte": "Vous avez une idée"
+    },
+    {
+      "id": "conseil-008",
+      "zone": "Accompagnements · Sous-titre",
+      "texte": "Plan de lancement"
+    },
+    {
+      "id": "conseil-009",
+      "zone": "Accompagnements · Texte",
+      "texte": "Pour une nouvelle boutique ou une marque d'e-liquides : gamme et prix, plateforme et paiement, fournisseurs, calendrier de lancement."
+    },
+    {
+      "id": "conseil-010",
+      "zone": "Accompagnements · Liste",
+      "texte": "Étude de la gamme et des concurrents"
+    },
+    {
+      "id": "conseil-011",
+      "zone": "Accompagnements · Liste",
+      "texte": "Budget et prévisionnel simple"
+    },
+    {
+      "id": "conseil-012",
+      "zone": "Accompagnements · Liste",
+      "texte": "Feuille de route sur 90 jours"
+    },
+    {
+      "id": "conseil-013",
+      "zone": "Accompagnements · Texte",
+      "texte": "Mission courte · sur devis"
+    },
+    {
+      "id": "conseil-014",
+      "zone": "Accompagnements · Texte",
+      "texte": "Vous vendez déjà"
+    },
+    {
+      "id": "conseil-015",
+      "zone": "Accompagnements · Sous-titre",
+      "texte": "Audit de boutique"
+    },
+    {
+      "id": "conseil-016",
+      "zone": "Accompagnements · Texte",
+      "texte": "Nous passons votre site au crible, du premier clic au paiement, et listons les corrections par ordre d'impact."
+    },
+    {
+      "id": "conseil-017",
+      "zone": "Accompagnements · Liste",
+      "texte": "Parcours d'achat, âge et paiement"
+    },
+    {
+      "id": "conseil-018",
+      "zone": "Accompagnements · Liste",
+      "texte": "Fiches e-liquides et mentions"
+    },
+    {
+      "id": "conseil-019",
+      "zone": "Accompagnements · Liste",
+      "texte": "Vitesse et référencement"
+    },
+    {
+      "id": "conseil-020",
+      "zone": "Accompagnements · Liste",
+      "texte": "Rapport et appel de restitution"
+    },
+    {
+      "id": "conseil-021",
+      "zone": "Accompagnements · Texte",
+      "texte": "Mission courte · sur devis"
+    },
+    {
+      "id": "conseil-022",
+      "zone": "Accompagnements · Texte",
+      "texte": "Vous voulez accélérer"
+    },
+    {
+      "id": "conseil-023",
+      "zone": "Accompagnements · Sous-titre",
+      "texte": "Acquisition"
+    },
+    {
+      "id": "conseil-024",
+      "zone": "Accompagnements · Texte",
+      "texte": "Plus de clients sans publicité, puisqu'elle est interdite pour la vape : référencement, e-mails et fidélité."
+    },
+    {
+      "id": "conseil-025",
+      "zone": "Accompagnements · Liste",
+      "texte": "SEO et contenus"
+    },
+    {
+      "id": "conseil-026",
+      "zone": "Accompagnements · Liste",
+      "texte": "Programme de fidélité et avis clients"
+    },
+    {
+      "id": "conseil-027",
+      "zone": "Accompagnements · Liste",
+      "texte": "Séquences d'e-mails automatiques"
+    },
+    {
+      "id": "conseil-028",
+      "zone": "Accompagnements · Texte",
+      "texte": "Accompagnement mensuel"
+    },
+    {
+      "id": "conseil-029",
+      "zone": "Un appel de 30 minutes suffit pour… · Titre",
+      "texte": "Un appel de 30 minutes suffit pour savoir par où commencer."
+    },
+    {
+      "id": "conseil-030",
+      "zone": "Un appel de 30 minutes suffit pour… · Lien ou bouton",
+      "texte": "Réserver un appel"
+    }
+  ]
+}

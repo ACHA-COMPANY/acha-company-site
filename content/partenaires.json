@@ -1,0 +1,32 @@
+{
+  "partenaires": [
+    {
+      "categorie": "Hébergement",
+      "nom": "",
+      "description": "Un hébergeur à faible impact pour votre boutique.",
+      "logo": "",
+      "lien": ""
+    },
+    {
+      "categorie": "Emballages",
+      "nom": "",
+      "description": "Des emballages recyclés ou réutilisables pour vos colis.",
+      "logo": "",
+      "lien": ""
+    },
+    {
+      "categorie": "Logistique",
+      "nom": "",
+      "description": "Des envois groupés et des points relais pour livrer mieux.",
+      "logo": "",
+      "lien": ""
+    },
+    {
+      "categorie": "Collecte et recyclage",
+      "nom": "",
+      "description": "Une filière pour reprendre les appareils et batteries usagés.",
+      "logo": "",
+      "lien": ""
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "textes": [
+    {
+      "id": "commun-001",
+      "zone": "Page · Lien ou bouton",
+      "texte": "Aller au contenu"
+    },
+    {
+      "id": "commun-002",
+      "zone": "Menu · Petit texte",
+      "texte": "ACHA"
+    },
+    {
+      "id": "commun-003",
+      "zone": "Menu · Petit texte",
+      "texte": "COMPANY"
+    },
+    {
+      "id": "commun-004",
+      "zone": "Menu · Lien ou bouton",
+      "texte": "Parler d'un projet"
+    },
+    {
+      "id": "commun-025",
+      "zone": "Menu · Lien ou bouton",
+      "texte": "Espace client"
+    },
+    {
+      "id": "commun-005",
+      "zone": "Menu · Petit texte",
+      "texte": "Menu"
+    },
+    {
+      "id": "commun-006",
+      "zone": "Menu · Lien ou bouton",
+      "texte": "Parler d'un projet"
+    },
+    {
+      "id": "commun-007",
+      "zone": "Pied de page · Petit texte",
+      "texte": "ACHA"
+    },
+    {
+      "id": "commun-008",
+      "zone": "Pied de page · Petit texte",
+      "texte": "COMPANY"
+    },
+    {
+      "id": "commun-009",
+      "zone": "Pied de page · Texte",
+      "texte": "Studio e-commerce et conseil spécialisés dans la vape. Vente de produits du vapotage interdite aux mineurs."
+    },
+    {
+      "id": "commun-010",
+      "zone": "Pied de page · Sous-titre",
+      "texte": "Groupe"
+    },
+    {
+      "id": "commun-011",
+      "zone": "Pied de page · Lien ou bouton",
+      "texte": "Qui sommes-nous"
+    },
+    {
+      "id": "commun-012",
+      "zone": "Pied de page · Lien ou bouton",
+      "texte": "Nos marques"
+    },
+    {
+      "id": "commun-013",
+      "zone": "Pied de page · Lien ou bouton",
+      "texte": "Nous contacter"
+    },
+    {
+      "id": "commun-014",
+      "zone": "Pied de page · Sous-titre",
+      "texte": "Services"
+    },
+    {
+      "id": "commun-015",
+      "zone": "Pied de page · Lien ou bouton",
+      "texte": "Studio web"
+    },
+    {
+      "id": "commun-016",
+      "zone": "Pied de page · Lien ou bouton",
+      "texte": "Conseil vape"
+    },
+    {
+      "id": "commun-017",
+      "zone": "Pied de page · Lien ou bouton",
+      "texte": "Co-création"
+    },
+    {
+      "id": "commun-018",
+      "zone": "Pied de page · Lien ou bouton",
+      "texte": "Éco-responsable"
+    },
+    {
+      "id": "commun-019",
+      "zone": "Pied de page · Sous-titre",
+      "texte": "Marques"
+    },
+    {
+      "id": "commun-020",
+      "zone": "Pied de page · Lien ou bouton",
+      "texte": "Vapolab.fr ↗"
+    },
+    {
+      "id": "commun-021",
+      "zone": "Pied de page · Liste",
+      "texte": "Marque n°2 · bientôt"
+    },
+    {
+      "id": "commun-022",
+      "zone": "Pied de page · Lien ou bouton",
+      "texte": "Mentions légales et confidentialité"
+    },
+    {
+      "id": "commun-023",
+      "zone": "Pied de page · Petit texte",
+      "texte": "Fait en France"
+    },
+    {
+      "id": "commun-024",
+      "zone": "Pied de page · Lien ou bouton",
+      "texte": "Espace admin"
+    }
+  ]
+}

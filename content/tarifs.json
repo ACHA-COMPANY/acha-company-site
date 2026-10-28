@@ -1,0 +1,236 @@
+{
+  "tva": 20,
+  "projets": [
+    {
+      "id": "vitrine",
+      "nom": "Site vitrine pour un magasin",
+      "detail": "Jusqu'à 6 pages, fiche Google, plan d'accès",
+      "prix": 1900,
+      "semaines": 2,
+      "ecom": false
+    },
+    {
+      "id": "theme",
+      "nom": "Boutique en ligne sur thème",
+      "detail": "Shopify ou WooCommerce, thème adapté à votre marque",
+      "prix": 4500,
+      "semaines": 5,
+      "ecom": true
+    },
+    {
+      "id": "mesure",
+      "nom": "Boutique en ligne sur-mesure",
+      "detail": "Design unique, parcours d'achat pensé pour la vape",
+      "prix": 9500,
+      "semaines": 8,
+      "ecom": true
+    },
+    {
+      "id": "refonte",
+      "nom": "Refonte d'une boutique existante",
+      "detail": "Nouveau design et mise aux normes du secteur",
+      "prix": 3500,
+      "semaines": 4,
+      "ecom": true
+    },
+    {
+      "id": "aucun",
+      "nom": "Pas de site, seulement du conseil",
+      "detail": "Audit, plan de lancement ou accompagnement",
+      "prix": 0,
+      "semaines": 0,
+      "ecom": false
+    }
+  ],
+  "catalogue": [
+    {
+      "id": "c50",
+      "nom": "Jusqu'à 50 produits",
+      "detail": "",
+      "prix": 0,
+      "semaines": 0
+    },
+    {
+      "id": "c200",
+      "nom": "51 à 200 produits",
+      "detail": "",
+      "prix": 600,
+      "semaines": 1
+    },
+    {
+      "id": "c500",
+      "nom": "201 à 500 produits",
+      "detail": "",
+      "prix": 1400,
+      "semaines": 1
+    },
+    {
+      "id": "c999",
+      "nom": "Plus de 500 produits",
+      "detail": "",
+      "prix": 2500,
+      "semaines": 2
+    }
+  ],
+  "options": [
+    {
+      "id": "age",
+      "nom": "Vérification d'âge intégrée",
+      "detail": "",
+      "prix": 350,
+      "semaines": 0,
+      "pour": "ecom",
+      "conseille": true,
+      "eco": false
+    },
+    {
+      "id": "paiement",
+      "nom": "Paiement compatible vape + solution de secours",
+      "detail": "",
+      "prix": 450,
+      "semaines": 0,
+      "pour": "ecom",
+      "conseille": true,
+      "eco": false
+    },
+    {
+      "id": "fiches",
+      "nom": "Fiches e-liquides conformes et filtres (nicotine, saveur, contenance)",
+      "detail": "",
+      "prix": 400,
+      "semaines": 0,
+      "pour": "ecom",
+      "conseille": true,
+      "eco": false
+    },
+    {
+      "id": "migration",
+      "nom": "Reprise du catalogue d'un ancien site",
+      "detail": "",
+      "prix": 900,
+      "semaines": 1,
+      "pour": "ecom",
+      "conseille": false,
+      "eco": false
+    },
+    {
+      "id": "seo",
+      "nom": "Référencement de départ (structure, balises, pages marques)",
+      "detail": "",
+      "prix": 900,
+      "semaines": 0,
+      "pour": "",
+      "conseille": false,
+      "eco": false
+    },
+    {
+      "id": "emails",
+      "nom": "E-mails automatiques (bienvenue, panier abandonné, réassort)",
+      "detail": "",
+      "prix": 650,
+      "semaines": 0,
+      "pour": "ecom",
+      "conseille": false,
+      "eco": false
+    },
+    {
+      "id": "fidelite",
+      "nom": "Programme de fidélité et avis clients",
+      "detail": "",
+      "prix": 500,
+      "semaines": 0,
+      "pour": "ecom",
+      "conseille": false,
+      "eco": false
+    },
+    {
+      "id": "logo",
+      "nom": "Logo et charte graphique",
+      "detail": "",
+      "prix": 1200,
+      "semaines": 1,
+      "pour": "",
+      "conseille": false,
+      "eco": false
+    },
+    {
+      "id": "formation",
+      "nom": "Formation à la prise en main (2 heures)",
+      "detail": "",
+      "prix": 250,
+      "semaines": 0,
+      "pour": "",
+      "conseille": false,
+      "eco": false
+    },
+    {
+      "id": "ecoconception",
+      "nom": "Éco-conception poussée (pages légères, mode sombre)",
+      "detail": "",
+      "prix": 300,
+      "semaines": 0,
+      "pour": "",
+      "conseille": false,
+      "eco": true
+    },
+    {
+      "id": "emballages",
+      "nom": "Emballages recyclés et page de reprise des appareils usagés",
+      "detail": "",
+      "prix": 250,
+      "semaines": 0,
+      "pour": "ecom",
+      "conseille": false,
+      "eco": true
+    },
+    {
+      "id": "partenaires",
+      "nom": "Mise en relation avec nos partenaires éco-responsables",
+      "detail": "",
+      "prix": 0,
+      "semaines": 0,
+      "pour": "",
+      "conseille": false,
+      "eco": true
+    }
+  ],
+  "conseil": [
+    {
+      "id": "audit",
+      "nom": "Audit de boutique vape",
+      "detail": "Paiement, âge, fiches, référencement, tunnel de vente",
+      "prix": 1200,
+      "semaines": 0
+    },
+    {
+      "id": "lancement",
+      "nom": "Plan de lancement d'une marque",
+      "detail": "Offre, prix, fournisseurs, calendrier",
+      "prix": 2500,
+      "semaines": 0
+    }
+  ],
+  "mensuel": [
+    {
+      "id": "m0",
+      "nom": "Pas de suivi",
+      "detail": "",
+      "prix": 0,
+      "semaines": 0
+    },
+    {
+      "id": "maintenance",
+      "nom": "Maintenance et sécurité",
+      "detail": "Mises à jour, sauvegardes, petites corrections",
+      "prix": 89,
+      "semaines": 0
+    },
+    {
+      "id": "croissance",
+      "nom": "Accompagnement croissance",
+      "detail": "Maintenance + référencement et e-mails, une journée par mois",
+      "prix": 590,
+      "semaines": 0
+    }
+  ]
+}

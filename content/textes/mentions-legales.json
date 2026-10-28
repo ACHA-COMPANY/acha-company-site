@@ -1,0 +1,66 @@
+{
+  "titre_onglet": "Mentions légales et confidentialité · ACHA COMPANY",
+  "description": "Mentions légales du site ACHA COMPANY et politique de confidentialité.",
+  "textes": [
+    {
+      "id": "mentions-legales-001",
+      "zone": "Informations légales · Texte",
+      "texte": "Informations légales"
+    },
+    {
+      "id": "mentions-legales-002",
+      "zone": "Informations légales · Grand titre",
+      "texte": "Mentions légales et confidentialité"
+    },
+    {
+      "id": "mentions-legales-003",
+      "zone": "Éditeur du site · Titre",
+      "texte": "Éditeur du site"
+    },
+    {
+      "id": "mentions-legales-004",
+      "zone": "Éditeur du site · Texte",
+      "texte": "ACHA COMPANY, société par actions simplifiée à associé unique au capital de 1 000 €.\nSiège social : 173 rue de Courcelles, 75017 Paris.\nImmatriculée au RCS de Paris sous le numéro 109 702 795 · SIRET 109 702 795 00013 · Code APE 4791B.\nTVA intracommunautaire : FR07109702795.\nResponsable de la publication : Anissa Malha, Président.\nContact : contact@acha-company.fr"
+    },
+    {
+      "id": "mentions-legales-005",
+      "zone": "Éditeur du site · Titre",
+      "texte": "Hébergement"
+    },
+    {
+      "id": "mentions-legales-006",
+      "zone": "Éditeur du site · Texte",
+      "texte": "Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis · netlify.com"
+    },
+    {
+      "id": "mentions-legales-007",
+      "zone": "Éditeur du site · Titre",
+      "texte": "Propriété intellectuelle"
+    },
+    {
+      "id": "mentions-legales-008",
+      "zone": "Éditeur du site · Texte",
+      "texte": "Les textes, logos et visuels de ce site appartiennent à ACHA COMPANY ou à ses marques. Toute reproduction sans accord écrit est interdite."
+    },
+    {
+      "id": "mentions-legales-009",
+      "zone": "Éditeur du site · Titre",
+      "texte": "Confidentialité"
+    },
+    {
+      "id": "mentions-legales-010",
+      "zone": "Éditeur du site · Texte",
+      "texte": "Les informations envoyées par le formulaire de contact (nom, e-mail, téléphone, message) servent uniquement à répondre à votre demande. Elles ne sont ni vendues ni partagées, et sont conservées 3 ans au plus après notre dernier échange."
+    },
+    {
+      "id": "mentions-legales-011",
+      "zone": "Éditeur du site · Texte",
+      "texte": "Conformément au RGPD, vous pouvez demander l'accès, la correction ou la suppression de vos données en écrivant à contact@acha-company.fr. Vous pouvez aussi saisir la CNIL (cnil.fr)."
+    },
+    {
+      "id": "mentions-legales-012",
+      "zone": "Éditeur du site · Texte",
+      "texte": "Ce site n'utilise pas de cookies publicitaires ni de mesure d'audience. Les polices de caractères sont chargées depuis Google Fonts."
+    }
+  ]
+}

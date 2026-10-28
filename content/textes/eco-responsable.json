@@ -1,0 +1,196 @@
+{
+  "titre_onglet": "Éco-responsable · Notre démarche et nos partenaires · ACHA COMPANY",
+  "description": "La démarche éco-responsable d'ACHA COMPANY : sites plus légers, options éco pour les boutiques de vape et partenaires mis à votre service.",
+  "textes": [
+    {
+      "id": "eco-responsable-001",
+      "zone": "ACHA Éco-responsable · Texte",
+      "texte": "ACHA Éco-responsable"
+    },
+    {
+      "id": "eco-responsable-002",
+      "zone": "ACHA Éco-responsable · Grand titre",
+      "texte": "Vendre en ligne en allégeant son empreinte."
+    },
+    {
+      "id": "eco-responsable-003",
+      "zone": "ACHA Éco-responsable · Texte",
+      "texte": "Nous appliquons ces gestes à nos propres projets, dont Vapolab.fr. Pour votre boutique, ils sont proposés en option : vous gardez ce qui a du sens pour vous, et nos partenaires sont à votre service."
+    },
+    {
+      "id": "eco-responsable-004",
+      "zone": "ACHA Éco-responsable · Lien ou bouton",
+      "texte": "Ajouter les options éco à mon devis"
+    },
+    {
+      "id": "eco-responsable-005",
+      "zone": "ACHA Éco-responsable · Lien ou bouton",
+      "texte": "Voir nos partenaires"
+    },
+    {
+      "id": "eco-responsable-006",
+      "zone": "Notre démarche · Texte",
+      "texte": "Notre démarche"
+    },
+    {
+      "id": "eco-responsable-007",
+      "zone": "Notre démarche · Titre",
+      "texte": "Trois façons d'*agir*, à votre rythme"
+    },
+    {
+      "id": "eco-responsable-008",
+      "zone": "Notre démarche · Texte",
+      "texte": "Rien n'est imposé. Chaque option est chiffrée dans le simulateur de devis, et la mise en relation avec nos partenaires est offerte."
+    },
+    {
+      "id": "eco-responsable-009",
+      "zone": "Notre démarche · Texte",
+      "texte": "Notre façon de travailler"
+    },
+    {
+      "id": "eco-responsable-010",
+      "zone": "Notre démarche · Sous-titre",
+      "texte": "Des sites plus légers"
+    },
+    {
+      "id": "eco-responsable-011",
+      "zone": "Notre démarche · Liste",
+      "texte": "Pages rapides : images optimisées, pas de scripts inutiles"
+    },
+    {
+      "id": "eco-responsable-012",
+      "zone": "Notre démarche · Liste",
+      "texte": "Hébergement chez des prestataires engagés quand c'est possible"
+    },
+    {
+      "id": "eco-responsable-013",
+      "zone": "Notre démarche · Liste",
+      "texte": "Rendez-vous en visio plutôt que des déplacements"
+    },
+    {
+      "id": "eco-responsable-014",
+      "zone": "Notre démarche · Texte",
+      "texte": "En option, si vous le souhaitez"
+    },
+    {
+      "id": "eco-responsable-015",
+      "zone": "Notre démarche · Sous-titre",
+      "texte": "Une boutique plus responsable"
+    },
+    {
+      "id": "eco-responsable-016",
+      "zone": "Notre démarche · Liste",
+      "texte": "Éco-conception poussée et mode sombre"
+    },
+    {
+      "id": "eco-responsable-017",
+      "zone": "Notre démarche · Liste",
+      "texte": "Emballages recyclés ou réutilisables"
+    },
+    {
+      "id": "eco-responsable-018",
+      "zone": "Notre démarche · Liste",
+      "texte": "Point relais et envois groupés mis en avant"
+    },
+    {
+      "id": "eco-responsable-019",
+      "zone": "Notre démarche · Liste",
+      "texte": "Page claire sur la reprise des appareils et batteries usagés"
+    },
+    {
+      "id": "eco-responsable-020",
+      "zone": "Notre démarche · Texte",
+      "texte": "Nos partenaires à votre service"
+    },
+    {
+      "id": "eco-responsable-021",
+      "zone": "Notre démarche · Sous-titre",
+      "texte": "Le bon réseau, tout de suite"
+    },
+    {
+      "id": "eco-responsable-022",
+      "zone": "Notre démarche · Liste",
+      "texte": "Hébergeurs à faible impact"
+    },
+    {
+      "id": "eco-responsable-023",
+      "zone": "Notre démarche · Liste",
+      "texte": "Fournisseurs d'emballages recyclés"
+    },
+    {
+      "id": "eco-responsable-024",
+      "zone": "Notre démarche · Liste",
+      "texte": "Logisticiens et transporteurs"
+    },
+    {
+      "id": "eco-responsable-025",
+      "zone": "Notre démarche · Liste",
+      "texte": "Filières de collecte et de recyclage du matériel de vape"
+    },
+    {
+      "id": "eco-responsable-026",
+      "zone": "Nos partenaires · Texte",
+      "texte": "Nos partenaires"
+    },
+    {
+      "id": "eco-responsable-027",
+      "zone": "Nos partenaires · Titre",
+      "texte": "Des partenaires engagés, mis à votre service"
+    },
+    {
+      "id": "eco-responsable-028",
+      "zone": "Nos partenaires · Texte",
+      "texte": "Nous vous présentons directement les bons interlocuteurs, selon votre projet. La liste s'enrichit au fil de nos collaborations."
+    },
+    {
+      "id": "eco-responsable-029",
+      "zone": "Comment ça marche · Texte",
+      "texte": "Comment ça marche"
+    },
+    {
+      "id": "eco-responsable-030",
+      "zone": "Comment ça marche · Titre",
+      "texte": "De votre devis à vos partenaires"
+    },
+    {
+      "id": "eco-responsable-031",
+      "zone": "Comment ça marche · Petit texte",
+      "texte": "Vous choisissez"
+    },
+    {
+      "id": "eco-responsable-032",
+      "zone": "Comment ça marche · Texte",
+      "texte": "Cochez les options éco qui vous parlent dans le simulateur de devis."
+    },
+    {
+      "id": "eco-responsable-033",
+      "zone": "Comment ça marche · Petit texte",
+      "texte": "Nous vous présentons"
+    },
+    {
+      "id": "eco-responsable-034",
+      "zone": "Comment ça marche · Texte",
+      "texte": "Nous vous mettons en relation avec les partenaires adaptés, sans frais."
+    },
+    {
+      "id": "eco-responsable-035",
+      "zone": "Comment ça marche · Petit texte",
+      "texte": "Nous intégrons"
+    },
+    {
+      "id": "eco-responsable-036",
+      "zone": "Comment ça marche · Texte",
+      "texte": "Emballages, livraison, reprise : tout est prévu dans votre boutique dès le lancement."
+    },
+    {
+      "id": "eco-responsable-037",
+      "zone": "Vous êtes une entreprise engagée et… · Titre",
+      "texte": "Vous êtes une entreprise engagée et voulez devenir partenaire ?"
+    },
+    {
+      "id": "eco-responsable-038",
+      "zone": "Vous êtes une entreprise engagée et… · Lien ou bouton",
+      "texte": "Nous écrire"
+    }
+  ]
+}

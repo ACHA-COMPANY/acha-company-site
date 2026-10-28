@@ -1,0 +1,336 @@
+{
+  "titre_onglet": "Studio web · Création de boutiques de vape en ligne · ACHA COMPANY",
+  "description": "Création et refonte de boutiques de vape en ligne : paiement compatible, vérification d'âge, catalogue e-liquides, par l'équipe de Vapolab.fr.",
+  "textes": [
+    {
+      "id": "studio-001",
+      "zone": "ACHA Studio · Pour les boutiques de vape · Texte",
+      "texte": "ACHA Studio · Pour les boutiques de vape"
+    },
+    {
+      "id": "studio-002",
+      "zone": "ACHA Studio · Pour les boutiques de vape · Grand titre",
+      "texte": "Votre boutique de vape en ligne, conçue par des gens qui en vendent."
+    },
+    {
+      "id": "studio-003",
+      "zone": "ACHA Studio · Pour les boutiques de vape · Texte",
+      "texte": "Nous concevons votre boutique de la maquette à la mise en ligne. Paiement, vérification d'âge, mentions obligatoires : tout ce que nous appliquons chez Vapolab.fr est prévu dès le départ."
+    },
+    {
+      "id": "studio-004",
+      "zone": "ACHA Studio · Pour les boutiques de vape · Lien ou bouton",
+      "texte": "Demander un devis"
+    },
+    {
+      "id": "studio-005",
+      "zone": "ACHA Studio · Pour les boutiques de vape · Lien ou bouton",
+      "texte": "Voir les offres"
+    },
+    {
+      "id": "studio-006",
+      "zone": "Nos offres · Texte",
+      "texte": "Nos offres"
+    },
+    {
+      "id": "studio-007",
+      "zone": "Nos offres · Titre",
+      "texte": "Trois formules, un seul interlocuteur"
+    },
+    {
+      "id": "studio-008",
+      "zone": "Nos offres · Texte",
+      "texte": "Chaque projet commence par un appel gratuit. Le devis est fixé avant de commencer."
+    },
+    {
+      "id": "studio-009",
+      "zone": "Nos offres · Texte",
+      "texte": "Magasin physique"
+    },
+    {
+      "id": "studio-010",
+      "zone": "Nos offres · Sous-titre",
+      "texte": "Site vitrine"
+    },
+    {
+      "id": "studio-011",
+      "zone": "Nos offres · Texte",
+      "texte": "Pour votre boutique de quartier : être trouvé sur Google, afficher vos horaires et vos marques, et faire venir les clients en magasin."
+    },
+    {
+      "id": "studio-012",
+      "zone": "Nos offres · Liste",
+      "texte": "Jusqu'à 6 pages"
+    },
+    {
+      "id": "studio-013",
+      "zone": "Nos offres · Liste",
+      "texte": "Fiche Google et plan d'accès"
+    },
+    {
+      "id": "studio-014",
+      "zone": "Nos offres · Liste",
+      "texte": "Référencement local"
+    },
+    {
+      "id": "studio-015",
+      "zone": "Nos offres · Liste",
+      "texte": "Prise en main en 1 heure"
+    },
+    {
+      "id": "studio-016",
+      "zone": "Nos offres · Texte",
+      "texte": "Sur devis"
+    },
+    {
+      "id": "studio-017",
+      "zone": "Nos offres · Texte",
+      "texte": "Vente"
+    },
+    {
+      "id": "studio-018",
+      "zone": "Nos offres · Sous-titre",
+      "texte": "Boutique vape en ligne"
+    },
+    {
+      "id": "studio-019",
+      "zone": "Nos offres · Texte",
+      "texte": "Pour vendre e-liquides et matériel partout en France, avec une plateforme et un paiement qui acceptent le secteur."
+    },
+    {
+      "id": "studio-020",
+      "zone": "Nos offres · Liste",
+      "texte": "Paiement compatible vape"
+    },
+    {
+      "id": "studio-021",
+      "zone": "Nos offres · Liste",
+      "texte": "Vérification d'âge"
+    },
+    {
+      "id": "studio-022",
+      "zone": "Nos offres · Liste",
+      "texte": "Fiches e-liquides avec mentions obligatoires"
+    },
+    {
+      "id": "studio-023",
+      "zone": "Nos offres · Liste",
+      "texte": "1 mois de suivi après lancement"
+    },
+    {
+      "id": "studio-024",
+      "zone": "Nos offres · Texte",
+      "texte": "Sur devis"
+    },
+    {
+      "id": "studio-025",
+      "zone": "Nos offres · Texte",
+      "texte": "Durée"
+    },
+    {
+      "id": "studio-026",
+      "zone": "Nos offres · Sous-titre",
+      "texte": "Suivi et maintenance"
+    },
+    {
+      "id": "studio-027",
+      "zone": "Nos offres · Texte",
+      "texte": "Pour que votre boutique reste à jour, rapide et sûre, et que les nouveautés soient en ligne le jour de leur arrivée."
+    },
+    {
+      "id": "studio-028",
+      "zone": "Nos offres · Liste",
+      "texte": "Mises à jour et sauvegardes"
+    },
+    {
+      "id": "studio-029",
+      "zone": "Nos offres · Liste",
+      "texte": "Ajout de produits et petites modifications"
+    },
+    {
+      "id": "studio-030",
+      "zone": "Nos offres · Liste",
+      "texte": "Rapport de visites et ventes"
+    },
+    {
+      "id": "studio-031",
+      "zone": "Nos offres · Texte",
+      "texte": "Abonnement mensuel"
+    },
+    {
+      "id": "studio-032",
+      "zone": "Méthode · Texte",
+      "texte": "Méthode"
+    },
+    {
+      "id": "studio-033",
+      "zone": "Méthode · Titre",
+      "texte": "Du premier appel à la première vente"
+    },
+    {
+      "id": "studio-034",
+      "zone": "Méthode · Texte",
+      "texte": "Les durées sont indicatives et dépendent de votre projet."
+    },
+    {
+      "id": "studio-035",
+      "zone": "Méthode · Petit texte",
+      "texte": "Étape 1"
+    },
+    {
+      "id": "studio-036",
+      "zone": "Méthode · Sous-titre",
+      "texte": "Diagnostic"
+    },
+    {
+      "id": "studio-037",
+      "zone": "Méthode · Texte",
+      "texte": "Un appel pour comprendre votre offre, votre public et vos objectifs de vente."
+    },
+    {
+      "id": "studio-038",
+      "zone": "Méthode · Petit texte",
+      "texte": "≈ 1 semaine"
+    },
+    {
+      "id": "studio-039",
+      "zone": "Méthode · Petit texte",
+      "texte": "Étape 2"
+    },
+    {
+      "id": "studio-040",
+      "zone": "Méthode · Sous-titre",
+      "texte": "Maquette"
+    },
+    {
+      "id": "studio-041",
+      "zone": "Méthode · Texte",
+      "texte": "Arborescence, design des pages clés et parcours d'achat avec vérification d'âge, validés avec vous."
+    },
+    {
+      "id": "studio-042",
+      "zone": "Méthode · Petit texte",
+      "texte": "≈ 2 semaines"
+    },
+    {
+      "id": "studio-043",
+      "zone": "Méthode · Petit texte",
+      "texte": "Étape 3"
+    },
+    {
+      "id": "studio-044",
+      "zone": "Méthode · Sous-titre",
+      "texte": "Construction"
+    },
+    {
+      "id": "studio-045",
+      "zone": "Méthode · Texte",
+      "texte": "Développement, catalogue, paiement, livraison et tests sur mobile."
+    },
+    {
+      "id": "studio-046",
+      "zone": "Méthode · Petit texte",
+      "texte": "≈ 3 à 4 semaines"
+    },
+    {
+      "id": "studio-047",
+      "zone": "Méthode · Petit texte",
+      "texte": "Étape 4"
+    },
+    {
+      "id": "studio-048",
+      "zone": "Méthode · Sous-titre",
+      "texte": "Lancement"
+    },
+    {
+      "id": "studio-049",
+      "zone": "Méthode · Texte",
+      "texte": "Mise en ligne, suivi des premières ventes et ajustements pendant un mois."
+    },
+    {
+      "id": "studio-050",
+      "zone": "Méthode · Petit texte",
+      "texte": "≈ 1 mois de suivi"
+    },
+    {
+      "id": "studio-051",
+      "zone": "Questions fréquentes · Texte",
+      "texte": "Questions fréquentes"
+    },
+    {
+      "id": "studio-052",
+      "zone": "Questions fréquentes · Titre",
+      "texte": "Avant de nous écrire"
+    },
+    {
+      "id": "studio-053",
+      "zone": "Questions fréquentes · Petit texte",
+      "texte": "Serai-je propriétaire de mon site ?"
+    },
+    {
+      "id": "studio-054",
+      "zone": "Questions fréquentes · Texte",
+      "texte": "Oui. Le nom de domaine, le contenu et les comptes (Shopify, hébergement) sont à votre nom. Vous pouvez partir quand vous voulez."
+    },
+    {
+      "id": "studio-055",
+      "zone": "Questions fréquentes · Petit texte",
+      "texte": "Ma banque a refusé ma boutique. Pouvez-vous m'aider ?"
+    },
+    {
+      "id": "studio-056",
+      "zone": "Questions fréquentes · Texte",
+      "texte": "C'est fréquent dans la vape. Nous vous orientons vers des solutions de paiement qui acceptent le secteur, et nous construisons le site autour d'elles."
+    },
+    {
+      "id": "studio-057",
+      "zone": "Questions fréquentes · Petit texte",
+      "texte": "Pouvez-vous reprendre un site existant ?"
+    },
+    {
+      "id": "studio-058",
+      "zone": "Questions fréquentes · Texte",
+      "texte": "Oui. Nous commençons par un audit pour savoir s'il vaut mieux l'améliorer ou le refaire."
+    },
+    {
+      "id": "studio-059",
+      "zone": "Questions fréquentes · Petit texte",
+      "texte": "Allez-vous faire de la publicité pour mes produits ?"
+    },
+    {
+      "id": "studio-060",
+      "zone": "Questions fréquentes · Texte",
+      "texte": "Non : la publicité pour les produits de la vape est interdite en France. Nous misons sur le référencement, l'e-mail à vos clients qui l'ont accepté et la fidélité."
+    },
+    {
+      "id": "studio-061",
+      "zone": "Questions fréquentes · Petit texte",
+      "texte": "Pourrai-je modifier les textes moi-même ?"
+    },
+    {
+      "id": "studio-062",
+      "zone": "Questions fréquentes · Texte",
+      "texte": "Oui pour les boutiques Shopify et WooCommerce : nous vous formons pendant une heure à la livraison."
+    },
+    {
+      "id": "studio-063",
+      "zone": "Questions fréquentes · Petit texte",
+      "texte": "Travaillez-vous partout en France ?"
+    },
+    {
+      "id": "studio-064",
+      "zone": "Questions fréquentes · Texte",
+      "texte": "Oui. Les rendez-vous se font en visio, et en présentiel quand c'est possible."
+    },
+    {
+      "id": "studio-065",
+      "zone": "Vous avez une boutique de vape à lancer… · Titre",
+      "texte": "Vous avez une boutique de vape à lancer ou à refaire ? Le premier appel est gratuit."
+    },
+    {
+      "id": "studio-066",
+      "zone": "Vous avez une boutique de vape à lancer… · Lien ou bouton",
+      "texte": "Demander un devis"
+    }
+  ]
+}

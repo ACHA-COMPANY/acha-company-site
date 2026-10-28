@@ -1,0 +1,891 @@
+{
+  "titre_onglet": "ACHA COMPANY · Studio e-commerce spécialiste de la vape",
+  "description": "ACHA COMPANY opère sa propre boutique de vape, Vapolab.fr, et accompagne les boutiques et marques de vape : création de sites e-commerce et conseil.",
+  "textes": [
+    {
+      "id": "index-001",
+      "zone": "Haut de page · Petit texte",
+      "texte": "Studio e-commerce · Vape uniquement · Paris"
+    },
+    {
+      "id": "index-002",
+      "zone": "Haut de page · Petit texte",
+      "texte": "Nous vendons"
+    },
+    {
+      "id": "index-003",
+      "zone": "Haut de page · Petit texte",
+      "texte": "de la vape."
+    },
+    {
+      "id": "index-004",
+      "zone": "Haut de page · Petit texte",
+      "texte": "Nous construisons"
+    },
+    {
+      "id": "index-005",
+      "zone": "Haut de page · Petit texte",
+      "texte": "*votre* boutique."
+    },
+    {
+      "id": "index-006",
+      "zone": "Haut de page · Texte",
+      "texte": "ACHA COMPANY gère sa propre boutique de vape, Vapolab.fr. Nous mettons cette expérience au service des boutiques et des marques du secteur : sites e-commerce et conseil pour vendre en ligne, dans les règles."
+    },
+    {
+      "id": "index-007",
+      "zone": "Haut de page · Lien ou bouton",
+      "texte": "Lancer votre projet"
+    },
+    {
+      "id": "index-008",
+      "zone": "Haut de page · Lien ou bouton",
+      "texte": "Simuler mon devis"
+    },
+    {
+      "id": "index-009",
+      "zone": "Bandeau défilant · Petit texte",
+      "texte": "Boutiques de vape"
+    },
+    {
+      "id": "index-010",
+      "zone": "Bandeau défilant · Petit texte",
+      "texte": "Paiement compatible"
+    },
+    {
+      "id": "index-011",
+      "zone": "Bandeau défilant · Petit texte",
+      "texte": "Vérification d'âge"
+    },
+    {
+      "id": "index-012",
+      "zone": "Bandeau défilant · Petit texte",
+      "texte": "Fiches e-liquides"
+    },
+    {
+      "id": "index-013",
+      "zone": "Bandeau défilant · Petit texte",
+      "texte": "Référencement"
+    },
+    {
+      "id": "index-014",
+      "zone": "Bandeau défilant · Petit texte",
+      "texte": "E-mails clients"
+    },
+    {
+      "id": "index-015",
+      "zone": "Bandeau défilant · Petit texte",
+      "texte": "Logistique"
+    },
+    {
+      "id": "index-016",
+      "zone": "Bandeau défilant · Petit texte",
+      "texte": "Conseil"
+    },
+    {
+      "id": "index-017",
+      "zone": "Bandeau défilant · Petit texte",
+      "texte": "Éco-responsable"
+    },
+    {
+      "id": "index-018",
+      "zone": "L'atelier · Texte",
+      "texte": "L'atelier"
+    },
+    {
+      "id": "index-019",
+      "zone": "L'atelier · Titre",
+      "texte": "Une équipe, six métiers, *une seule* obsession : vos ventes."
+    },
+    {
+      "id": "index-020",
+      "zone": "L'atelier · Texte",
+      "texte": "Du premier pixel au colis livré, tout se fait sous le même toit. Et tout a d'abord été testé sur notre propre boutique."
+    },
+    {
+      "id": "index-021",
+      "zone": "L'atelier · Liste",
+      "texte": "Création du site"
+    },
+    {
+      "id": "index-022",
+      "zone": "L'atelier · Liste",
+      "texte": "Développement"
+    },
+    {
+      "id": "index-023",
+      "zone": "L'atelier · Liste",
+      "texte": "Référencement"
+    },
+    {
+      "id": "index-024",
+      "zone": "L'atelier · Liste",
+      "texte": "Communauté"
+    },
+    {
+      "id": "index-025",
+      "zone": "L'atelier · Liste",
+      "texte": "E-mails clients"
+    },
+    {
+      "id": "index-026",
+      "zone": "L'atelier · Liste",
+      "texte": "Logistique"
+    },
+    {
+      "id": "index-027",
+      "zone": "L'atelier · Texte",
+      "texte": "← Faites glisser pour voir toute l'équipe →"
+    },
+    {
+      "id": "index-028",
+      "zone": "Nos métiers · Texte",
+      "texte": "Nos métiers"
+    },
+    {
+      "id": "index-029",
+      "zone": "Nos métiers · Titre",
+      "texte": "Trois pôles, une même équipe"
+    },
+    {
+      "id": "index-030",
+      "zone": "Nos métiers · Texte",
+      "texte": "Un client du studio profite de ce que nous apprenons chaque jour en vendant de la vape nous-mêmes."
+    },
+    {
+      "id": "index-031",
+      "zone": "Nos métiers · Texte",
+      "texte": "Pour les boutiques de vape"
+    },
+    {
+      "id": "index-032",
+      "zone": "Nos métiers · Sous-titre",
+      "texte": "Studio web"
+    },
+    {
+      "id": "index-033",
+      "zone": "Nos métiers · Texte",
+      "texte": "Votre boutique en ligne, de la maquette à la mise en ligne, avec les contraintes du secteur déjà prévues."
+    },
+    {
+      "id": "index-034",
+      "zone": "Nos métiers · Liste",
+      "texte": "Création et refonte de boutiques vape"
+    },
+    {
+      "id": "index-035",
+      "zone": "Nos métiers · Liste",
+      "texte": "Paiement et vérification d'âge"
+    },
+    {
+      "id": "index-036",
+      "zone": "Nos métiers · Liste",
+      "texte": "Catalogue e-liquides et matériel"
+    },
+    {
+      "id": "index-037",
+      "zone": "Nos métiers · Petit texte",
+      "texte": "Découvrir le studio"
+    },
+    {
+      "id": "index-038",
+      "zone": "Nos métiers · Texte",
+      "texte": "Pour les marques et fabricants"
+    },
+    {
+      "id": "index-039",
+      "zone": "Nos métiers · Sous-titre",
+      "texte": "Conseil"
+    },
+    {
+      "id": "index-040",
+      "zone": "Nos métiers · Texte",
+      "texte": "Audit de boutique, plan de lancement d'une marque, acquisition sans publicité : référencement, e-mail, fidélité."
+    },
+    {
+      "id": "index-041",
+      "zone": "Nos métiers · Petit texte",
+      "texte": "Découvrir le conseil"
+    },
+    {
+      "id": "index-042",
+      "zone": "Nos métiers · Texte",
+      "texte": "Nos propres boutiques"
+    },
+    {
+      "id": "index-043",
+      "zone": "Nos métiers · Sous-titre",
+      "texte": "Marques"
+    },
+    {
+      "id": "index-044",
+      "zone": "Nos métiers · Texte",
+      "texte": "Nous créons et gérons nos boutiques de vape en ligne, dont Vapolab.fr."
+    },
+    {
+      "id": "index-045",
+      "zone": "Nos métiers · Petit texte",
+      "texte": "Voir nos marques"
+    },
+    {
+      "id": "index-046",
+      "zone": "Nos métiers · Texte",
+      "texte": "À venir"
+    },
+    {
+      "id": "index-047",
+      "zone": "Nos métiers · Sous-titre",
+      "texte": "Votre marque ?"
+    },
+    {
+      "id": "index-048",
+      "zone": "Nos métiers · Texte",
+      "texte": "Une place est réservée pour la prochaine enseigne du groupe."
+    },
+    {
+      "id": "index-049",
+      "zone": "Nos métiers · Petit texte",
+      "texte": "Proposer un projet"
+    },
+    {
+      "id": "index-050",
+      "zone": "Pourquoi un spécialiste · Texte",
+      "texte": "Pourquoi un spécialiste"
+    },
+    {
+      "id": "index-051",
+      "zone": "Pourquoi un spécialiste · Titre",
+      "texte": "Vendre de la vape en ligne ne ressemble à aucun autre e-commerce"
+    },
+    {
+      "id": "index-052",
+      "zone": "Pourquoi un spécialiste · Texte",
+      "texte": "Quatre sujets bloquent la plupart des boutiques. Choisissez-en un pour voir comment nous le traitons."
+    },
+    {
+      "id": "index-053",
+      "zone": "Pourquoi un spécialiste · Petit texte",
+      "texte": "Pas de publicité"
+    },
+    {
+      "id": "index-054",
+      "zone": "Pourquoi un spécialiste · Petit texte",
+      "texte": "Paiement"
+    },
+    {
+      "id": "index-055",
+      "zone": "Pourquoi un spécialiste · Petit texte",
+      "texte": "Vérification d'âge"
+    },
+    {
+      "id": "index-056",
+      "zone": "Pourquoi un spécialiste · Petit texte",
+      "texte": "Fiches produits"
+    },
+    {
+      "id": "index-057",
+      "zone": "Pourquoi un spécialiste · Sous-titre",
+      "texte": "Pas de publicité payante : tout passe par le naturel"
+    },
+    {
+      "id": "index-058",
+      "zone": "Pourquoi un spécialiste · Texte",
+      "texte": "En France, la publicité pour les produits du vapotage est interdite, et Google comme Meta refusent ces annonces. Les clients doivent donc vous trouver seuls : sur Google, par e-mail et par le bouche-à-oreille."
+    },
+    {
+      "id": "index-059",
+      "zone": "Pourquoi un spécialiste · Petit texte",
+      "texte": "Notre réponse"
+    },
+    {
+      "id": "index-060",
+      "zone": "Pourquoi un spécialiste · Liste",
+      "texte": "Référencement naturel pensé dès la structure du site"
+    },
+    {
+      "id": "index-061",
+      "zone": "Pourquoi un spécialiste · Liste",
+      "texte": "E-mails automatiques aux clients qui l'ont accepté"
+    },
+    {
+      "id": "index-062",
+      "zone": "Pourquoi un spécialiste · Liste",
+      "texte": "Programme de fidélité et avis clients"
+    },
+    {
+      "id": "index-063",
+      "zone": "Pourquoi un spécialiste · Sous-titre",
+      "texte": "Un paiement refusé, c'est une boutique à l'arrêt"
+    },
+    {
+      "id": "index-064",
+      "zone": "Pourquoi un spécialiste · Texte",
+      "texte": "Beaucoup de banques et de solutions de paiement refusent ou limitent le secteur. Un compte suspendu après le lancement bloque toutes les ventes du jour au lendemain."
+    },
+    {
+      "id": "index-065",
+      "zone": "Pourquoi un spécialiste · Petit texte",
+      "texte": "Notre réponse"
+    },
+    {
+      "id": "index-066",
+      "zone": "Pourquoi un spécialiste · Liste",
+      "texte": "Choix d'un prestataire qui accepte la vape, avant de construire"
+    },
+    {
+      "id": "index-067",
+      "zone": "Pourquoi un spécialiste · Liste",
+      "texte": "Plan de secours avec un second moyen de paiement"
+    },
+    {
+      "id": "index-068",
+      "zone": "Pourquoi un spécialiste · Liste",
+      "texte": "Plateforme choisie en fonction du paiement, pas l'inverse"
+    },
+    {
+      "id": "index-069",
+      "zone": "Pourquoi un spécialiste · Sous-titre",
+      "texte": "Vérifier l'âge sans faire fuir les clients majeurs"
+    },
+    {
+      "id": "index-070",
+      "zone": "Pourquoi un spécialiste · Texte",
+      "texte": "La vente aux mineurs est interdite. Le site doit le dire clairement et vérifier l'âge, sans transformer chaque visite en formulaire administratif."
+    },
+    {
+      "id": "index-071",
+      "zone": "Pourquoi un spécialiste · Petit texte",
+      "texte": "Notre réponse"
+    },
+    {
+      "id": "index-072",
+      "zone": "Pourquoi un spécialiste · Liste",
+      "texte": "Vérification d'âge intégrée au parcours d'achat"
+    },
+    {
+      "id": "index-073",
+      "zone": "Pourquoi un spécialiste · Liste",
+      "texte": "Mentions visibles sur toutes les pages"
+    },
+    {
+      "id": "index-074",
+      "zone": "Pourquoi un spécialiste · Liste",
+      "texte": "Tests sur mobile pour garder un achat fluide"
+    },
+    {
+      "id": "index-075",
+      "zone": "Pourquoi un spécialiste · Sous-titre",
+      "texte": "Des fiches e-liquides complètes et sans erreur"
+    },
+    {
+      "id": "index-076",
+      "zone": "Pourquoi un spécialiste · Texte",
+      "texte": "Taux de nicotine, contenance, avertissements sanitaires : chaque produit a ses mentions. Une fiche incomplète fait perdre la confiance du client, et expose la boutique."
+    },
+    {
+      "id": "index-077",
+      "zone": "Pourquoi un spécialiste · Petit texte",
+      "texte": "Notre réponse"
+    },
+    {
+      "id": "index-078",
+      "zone": "Pourquoi un spécialiste · Liste",
+      "texte": "Modèle de fiche produit avec les mentions prévues"
+    },
+    {
+      "id": "index-079",
+      "zone": "Pourquoi un spécialiste · Liste",
+      "texte": "Filtres par taux de nicotine, saveur et contenance"
+    },
+    {
+      "id": "index-080",
+      "zone": "Pourquoi un spécialiste · Liste",
+      "texte": "Import du catalogue de vos fournisseurs"
+    },
+    {
+      "id": "index-081",
+      "zone": "Auto-diagnostic · 1 minute · Texte",
+      "texte": "Auto-diagnostic · 1 minute"
+    },
+    {
+      "id": "index-082",
+      "zone": "Auto-diagnostic · 1 minute · Titre",
+      "texte": "Votre boutique de vape est-elle prête à vendre ?"
+    },
+    {
+      "id": "index-083",
+      "zone": "Auto-diagnostic · 1 minute · Texte",
+      "texte": "Six questions, celles que nous posons à chaque nouveau client. Le résultat s'affiche au fur et à mesure."
+    },
+    {
+      "id": "index-084",
+      "zone": "Auto-diagnostic · 1 minute · Conseil",
+      "texte": "Sécurisez un prestataire de paiement qui accepte officiellement le secteur : un compte suspendu bloque toutes vos ventes."
+    },
+    {
+      "id": "index-085",
+      "zone": "Auto-diagnostic · 1 minute · Texte",
+      "texte": "Votre solution de paiement accepte-t-elle officiellement la vente de produits du vapotage ?"
+    },
+    {
+      "id": "index-086",
+      "zone": "Auto-diagnostic · 1 minute · Champ",
+      "texte": "Oui"
+    },
+    {
+      "id": "index-087",
+      "zone": "Auto-diagnostic · 1 minute · Champ",
+      "texte": "Non"
+    },
+    {
+      "id": "index-088",
+      "zone": "Auto-diagnostic · 1 minute · Conseil",
+      "texte": "Ajoutez une vérification d'âge claire avant l'achat : la vente aux mineurs est interdite."
+    },
+    {
+      "id": "index-089",
+      "zone": "Auto-diagnostic · 1 minute · Texte",
+      "texte": "Le site vérifie-t-il l'âge des visiteurs avant l'achat ?"
+    },
+    {
+      "id": "index-090",
+      "zone": "Auto-diagnostic · 1 minute · Champ",
+      "texte": "Oui"
+    },
+    {
+      "id": "index-091",
+      "zone": "Auto-diagnostic · 1 minute · Champ",
+      "texte": "Non"
+    },
+    {
+      "id": "index-092",
+      "zone": "Auto-diagnostic · 1 minute · Conseil",
+      "texte": "Complétez vos fiches : taux de nicotine, contenance et avertissement sanitaire sur chaque e-liquide."
+    },
+    {
+      "id": "index-093",
+      "zone": "Auto-diagnostic · 1 minute · Texte",
+      "texte": "Chaque fiche e-liquide affiche-t-elle le taux de nicotine, la contenance et l'avertissement sanitaire ?"
+    },
+    {
+      "id": "index-094",
+      "zone": "Auto-diagnostic · 1 minute · Champ",
+      "texte": "Oui"
+    },
+    {
+      "id": "index-095",
+      "zone": "Auto-diagnostic · 1 minute · Champ",
+      "texte": "Non"
+    },
+    {
+      "id": "index-096",
+      "zone": "Auto-diagnostic · 1 minute · Conseil",
+      "texte": "Travaillez le référencement naturel : titres, descriptions et pages par marque ou par saveur. Sans publicité possible, c'est votre première source de visites."
+    },
+    {
+      "id": "index-097",
+      "zone": "Auto-diagnostic · 1 minute · Texte",
+      "texte": "Votre boutique apparaît-elle sur Google quand on cherche vos marques ou vos produits ?"
+    },
+    {
+      "id": "index-098",
+      "zone": "Auto-diagnostic · 1 minute · Champ",
+      "texte": "Oui"
+    },
+    {
+      "id": "index-099",
+      "zone": "Auto-diagnostic · 1 minute · Champ",
+      "texte": "Non"
+    },
+    {
+      "id": "index-100",
+      "zone": "Auto-diagnostic · 1 minute · Conseil",
+      "texte": "Accélérez votre site sur mobile : beaucoup d'achats se font sur téléphone, et chaque seconde d'attente fait fuir."
+    },
+    {
+      "id": "index-101",
+      "zone": "Auto-diagnostic · 1 minute · Texte",
+      "texte": "Votre boutique s'affiche-t-elle en moins de 3 secondes sur mobile ?"
+    },
+    {
+      "id": "index-102",
+      "zone": "Auto-diagnostic · 1 minute · Champ",
+      "texte": "Oui"
+    },
+    {
+      "id": "index-103",
+      "zone": "Auto-diagnostic · 1 minute · Champ",
+      "texte": "Non"
+    },
+    {
+      "id": "index-104",
+      "zone": "Auto-diagnostic · 1 minute · Conseil",
+      "texte": "Mettez en place des e-mails automatiques (panier abandonné, réassort) : ce sont des ventes récupérées sans rien dépenser."
+    },
+    {
+      "id": "index-105",
+      "zone": "Auto-diagnostic · 1 minute · Texte",
+      "texte": "Envoyez-vous des e-mails automatiques (panier abandonné, réassort) aux clients qui l'ont accepté ?"
+    },
+    {
+      "id": "index-106",
+      "zone": "Auto-diagnostic · 1 minute · Champ",
+      "texte": "Oui"
+    },
+    {
+      "id": "index-107",
+      "zone": "Auto-diagnostic · 1 minute · Champ",
+      "texte": "Non"
+    },
+    {
+      "id": "index-108",
+      "zone": "Auto-diagnostic · 1 minute · Texte",
+      "texte": "Votre résultat"
+    },
+    {
+      "id": "index-109",
+      "zone": "Auto-diagnostic · 1 minute · Petit texte",
+      "texte": "/ 6 points"
+    },
+    {
+      "id": "index-110",
+      "zone": "Auto-diagnostic · 1 minute · Petit texte",
+      "texte": "Répondez aux questions"
+    },
+    {
+      "id": "index-111",
+      "zone": "Auto-diagnostic · 1 minute · Liste",
+      "texte": "Vos priorités s'afficheront ici."
+    },
+    {
+      "id": "index-112",
+      "zone": "Auto-diagnostic · 1 minute · Petit texte",
+      "texte": "Recevoir un diagnostic complet"
+    },
+    {
+      "id": "index-113",
+      "zone": "Auto-diagnostic · 1 minute · Texte",
+      "texte": "Résultat indicatif. Il ne remplace pas un audit de votre boutique."
+    },
+    {
+      "id": "index-114",
+      "zone": "Pourquoi ACHA COMPANY · Texte",
+      "texte": "Pourquoi ACHA COMPANY"
+    },
+    {
+      "id": "index-115",
+      "zone": "Pourquoi ACHA COMPANY · Texte",
+      "texte": "Tout ce que nous recommandons à un client, nous l'avons ==d'abord testé== sur ==notre propre boutique==."
+    },
+    {
+      "id": "index-116",
+      "zone": "Pourquoi ACHA COMPANY · Petit texte",
+      "texte": "boutique de vape opérée en propre, Vapolab.fr"
+    },
+    {
+      "id": "index-117",
+      "zone": "Pourquoi ACHA COMPANY · Petit texte",
+      "texte": "de nos projets dans la vape, rien d'autre"
+    },
+    {
+      "id": "index-118",
+      "zone": "Pourquoi ACHA COMPANY · Petit texte",
+      "texte": "de publicité : tout passe par le référencement, l'e-mail et la fidélité"
+    },
+    {
+      "id": "index-119",
+      "zone": "Éco-responsable · Texte",
+      "texte": "Éco-responsable"
+    },
+    {
+      "id": "index-120",
+      "zone": "Éco-responsable · Titre",
+      "texte": "Vendre en ligne en *allégeant* son empreinte"
+    },
+    {
+      "id": "index-121",
+      "zone": "Éco-responsable · Texte",
+      "texte": "Nous appliquons ces gestes à nos propres projets. Pour votre boutique, ils sont proposés en option : vous gardez ce qui a du sens pour vous, et nos partenaires sont à votre service."
+    },
+    {
+      "id": "index-122",
+      "zone": "Éco-responsable · Texte",
+      "texte": "Notre façon de travailler"
+    },
+    {
+      "id": "index-123",
+      "zone": "Éco-responsable · Sous-titre",
+      "texte": "Des sites plus légers"
+    },
+    {
+      "id": "index-124",
+      "zone": "Éco-responsable · Liste",
+      "texte": "Pages rapides : images optimisées, pas de scripts inutiles"
+    },
+    {
+      "id": "index-125",
+      "zone": "Éco-responsable · Liste",
+      "texte": "Hébergement chez des prestataires engagés quand c'est possible"
+    },
+    {
+      "id": "index-126",
+      "zone": "Éco-responsable · Liste",
+      "texte": "Rendez-vous en visio plutôt que des déplacements"
+    },
+    {
+      "id": "index-127",
+      "zone": "Éco-responsable · Texte",
+      "texte": "En option, si vous le souhaitez"
+    },
+    {
+      "id": "index-128",
+      "zone": "Éco-responsable · Sous-titre",
+      "texte": "Une boutique plus responsable"
+    },
+    {
+      "id": "index-129",
+      "zone": "Éco-responsable · Liste",
+      "texte": "Éco-conception poussée et mode sombre"
+    },
+    {
+      "id": "index-130",
+      "zone": "Éco-responsable · Liste",
+      "texte": "Emballages recyclés ou réutilisables"
+    },
+    {
+      "id": "index-131",
+      "zone": "Éco-responsable · Liste",
+      "texte": "Point relais et envois groupés mis en avant"
+    },
+    {
+      "id": "index-132",
+      "zone": "Éco-responsable · Liste",
+      "texte": "Page claire sur la reprise des appareils et batteries usagés"
+    },
+    {
+      "id": "index-133",
+      "zone": "Éco-responsable · Texte",
+      "texte": "Nos partenaires à votre service"
+    },
+    {
+      "id": "index-134",
+      "zone": "Éco-responsable · Sous-titre",
+      "texte": "Le bon réseau, tout de suite"
+    },
+    {
+      "id": "index-135",
+      "zone": "Éco-responsable · Liste",
+      "texte": "Hébergeurs à faible impact"
+    },
+    {
+      "id": "index-136",
+      "zone": "Éco-responsable · Liste",
+      "texte": "Fournisseurs d'emballages recyclés"
+    },
+    {
+      "id": "index-137",
+      "zone": "Éco-responsable · Liste",
+      "texte": "Logisticiens et transporteurs"
+    },
+    {
+      "id": "index-138",
+      "zone": "Éco-responsable · Liste",
+      "texte": "Filières de collecte et de recyclage du matériel de vape"
+    },
+    {
+      "id": "index-139",
+      "zone": "Éco-responsable · Lien ou bouton",
+      "texte": "Notre démarche et nos partenaires"
+    },
+    {
+      "id": "index-140",
+      "zone": "Éco-responsable · Lien ou bouton",
+      "texte": "Ajouter les options éco à mon devis"
+    },
+    {
+      "id": "index-141",
+      "zone": "Nos marques · Texte",
+      "texte": "Nos marques"
+    },
+    {
+      "id": "index-142",
+      "zone": "Nos marques · Titre",
+      "texte": "Notre boutique, notre terrain d'essai"
+    },
+    {
+      "id": "index-143",
+      "zone": "Nos marques · Texte",
+      "texte": "Vapolab.fr est la boutique de vape du groupe. Tout ce que nous recommandons à nos clients, nous l'avons d'abord testé chez elle."
+    },
+    {
+      "id": "index-144",
+      "zone": "Nos marques · Petit texte",
+      "texte": "Vapo*lab*.fr"
+    },
+    {
+      "id": "index-145",
+      "zone": "Nos marques · Petit texte",
+      "texte": "En ligne"
+    },
+    {
+      "id": "index-146",
+      "zone": "Nos marques · Petit texte",
+      "texte": "E-LIQUIDES ✦ E-CIGARETTES ✦ CBD ✦ DIY"
+    },
+    {
+      "id": "index-147",
+      "zone": "Nos marques · Texte",
+      "texte": "Marque n°1 · E-commerce"
+    },
+    {
+      "id": "index-148",
+      "zone": "Nos marques · Texte",
+      "texte": "La boutique en ligne de vape du groupe : e-liquides, matériel, CBD et DIY, avec un ton complice et une mascotte, le scientifique du labo."
+    },
+    {
+      "id": "index-149",
+      "zone": "Nos marques · Petit texte",
+      "texte": "E-LIQUIDES"
+    },
+    {
+      "id": "index-150",
+      "zone": "Nos marques · Petit texte",
+      "texte": "MATÉRIEL"
+    },
+    {
+      "id": "index-151",
+      "zone": "Nos marques · Petit texte",
+      "texte": "CBD"
+    },
+    {
+      "id": "index-152",
+      "zone": "Nos marques · Petit texte",
+      "texte": "DIY"
+    },
+    {
+      "id": "index-153",
+      "zone": "Nos marques · Petit texte",
+      "texte": "Vente interdite aux mineurs"
+    },
+    {
+      "id": "index-154",
+      "zone": "Nos marques · Lien ou bouton",
+      "texte": "Vapolab.fr ↗"
+    },
+    {
+      "id": "index-155",
+      "zone": "Nos marques · Sous-titre",
+      "texte": "Marque n°2"
+    },
+    {
+      "id": "index-156",
+      "zone": "Nos marques · Texte",
+      "texte": "Emplacement prévu pour la prochaine enseigne vape du groupe."
+    },
+    {
+      "id": "index-157",
+      "zone": "Nos marques · Texte",
+      "texte": "En préparation"
+    },
+    {
+      "id": "index-158",
+      "zone": "Nos marques · Sous-titre",
+      "texte": "Votre marque ?"
+    },
+    {
+      "id": "index-159",
+      "zone": "Nos marques · Texte",
+      "texte": "Vous fabriquez des e-liquides ou du matériel et cherchez un partenaire pour les vendre en ligne ? Parlons d'une co-création."
+    },
+    {
+      "id": "index-160",
+      "zone": "Nos marques · Lien ou bouton",
+      "texte": "Proposer un projet →"
+    },
+    {
+      "id": "index-161",
+      "zone": "Méthode du studio · Texte",
+      "texte": "Méthode du studio"
+    },
+    {
+      "id": "index-162",
+      "zone": "Méthode du studio · Titre",
+      "texte": "Du premier appel à la première vente"
+    },
+    {
+      "id": "index-163",
+      "zone": "Méthode du studio · Texte",
+      "texte": "Quatre étapes. Les durées sont indicatives et dépendent de votre projet."
+    },
+    {
+      "id": "index-164",
+      "zone": "Méthode du studio · Sous-titre",
+      "texte": "Diagnostic"
+    },
+    {
+      "id": "index-165",
+      "zone": "Méthode du studio · Texte",
+      "texte": "Un appel pour comprendre votre offre, votre public et vos objectifs de vente."
+    },
+    {
+      "id": "index-166",
+      "zone": "Méthode du studio · Petit texte",
+      "texte": "≈ 1 semaine"
+    },
+    {
+      "id": "index-167",
+      "zone": "Méthode du studio · Sous-titre",
+      "texte": "Maquette"
+    },
+    {
+      "id": "index-168",
+      "zone": "Méthode du studio · Texte",
+      "texte": "Arborescence, design des pages clés et parcours d'achat, validés avec vous."
+    },
+    {
+      "id": "index-169",
+      "zone": "Méthode du studio · Petit texte",
+      "texte": "≈ 2 semaines"
+    },
+    {
+      "id": "index-170",
+      "zone": "Méthode du studio · Sous-titre",
+      "texte": "Construction"
+    },
+    {
+      "id": "index-171",
+      "zone": "Méthode du studio · Texte",
+      "texte": "Développement, catalogue, paiement, vérification d'âge, livraison et tests sur mobile."
+    },
+    {
+      "id": "index-172",
+      "zone": "Méthode du studio · Petit texte",
+      "texte": "≈ 3 à 4 semaines"
+    },
+    {
+      "id": "index-173",
+      "zone": "Méthode du studio · Sous-titre",
+      "texte": "Lancement"
+    },
+    {
+      "id": "index-174",
+      "zone": "Méthode du studio · Texte",
+      "texte": "Mise en ligne, suivi des premières ventes et ajustements pendant un mois."
+    },
+    {
+      "id": "index-175",
+      "zone": "Méthode du studio · Petit texte",
+      "texte": "≈ 1 mois de suivi"
+    },
+    {
+      "id": "index-176",
+      "zone": "Une boutique ou une marque de vape à… · Texte",
+      "texte": "Une boutique ou une marque de vape à lancer ?"
+    },
+    {
+      "id": "index-177",
+      "zone": "Une boutique ou une marque de vape à… · Petit texte",
+      "texte": "Parlons-en"
+    }
+  ]
+}
