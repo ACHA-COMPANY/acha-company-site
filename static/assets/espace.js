@@ -240,11 +240,76 @@
       h('button', { class: 'btn ghost', type: 'button', text: 'Remplacer mon Kbis', onclick: function () { show(viewKbis(p)); } })]));
   }
 
-  // ---------- tableau de bord ----------
+  // ---------- éléments communs des tableaux de bord (repris par espace-admin.js) ----------
   var ETAPES = ['Diagnostic', 'Maquette', 'Construction', 'Lancement'];
   var STATUTS = { en_cours: 'En cours', en_pause: 'En pause', termine: 'Terminé' };
   var TYPES = { devis: 'Devis', facture: 'Facture', document: 'Document' };
-  E.ETAPES = ETAPES; E.STATUTS = STATUTS; E.TYPES = TYPES;
+  var DOC_STATUTS = { devis: ['à signer', 'signé', 'refusé'], facture: ['à payer', 'payée'], document: [] };
+  E.ETAPES = ETAPES; E.STATUTS = STATUTS; E.TYPES = TYPES; E.DOC_STATUTS = DOC_STATUTS; E.dateTime = dateTime;
+
+  var NS = 'http://www.w3.org/2000/svg';
+  var ICONS = {
+    grid: '<rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/>',
+    projet: '<path d="M12 3.5l8.5 4.5-8.5 4.5-8.5-4.5z"/><path d="M3.5 12.5l8.5 4.5 8.5-4.5"/><path d="M3.5 16.5l8.5 4.5 8.5-4.5"/>',
+    devis: '<path d="M14 3.5H6.5a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V8z"/><path d="M14 3.5V8h4.5"/><path d="M9 12.5h6M9 16h4"/>',
+    facture: '<path d="M6 3.5h12v17l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 11.5h6M9 15h3"/>',
+    doc: '<path d="M3.5 7.5a2 2 0 0 1 2-2h4l2 2h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/>',
+    msg: '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/>',
+    entreprise: '<path d="M4.5 20.5V5l7.5-2v17.5"/><path d="M12 9h7.5v11.5"/><path d="M3 20.5h18"/><path d="M8 8.5v.01M8 12v.01M8 15.5v.01M15.5 12.5v.01M15.5 16v.01"/>',
+    reglages: '<path d="M4 6.5h9M17 6.5h3M4 12h3M11 12h9M4 17.5h11M19 17.5h1"/><circle cx="15" cy="6.5" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="17.5" r="2"/>',
+    sortie: '<path d="M14.5 4h4.5v16h-4.5"/><path d="M10 8l-4 4 4 4M6 12h10"/>',
+    valider: '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 11l2 2 4-4"/>',
+    clients: '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M15.5 4.5a3.5 3.5 0 0 1 0 7M18 14.5c2 .7 3.5 2.6 3.5 5.5"/>',
+    crayon: '<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/>',
+    site: '<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17"/>',
+    menu: '<path d="M4 7h16M4 12h16M4 17h16"/>'
+  };
+  function icon(n) {
+    var s = document.createElementNS(NS, 'svg');
+    s.setAttribute('viewBox', '0 0 24 24'); s.setAttribute('class', 'ec-ico'); s.setAttribute('aria-hidden', 'true');
+    s.innerHTML = ICONS[n] || '';
+    return s;
+  }
+
+  // Mise en page commune : menu latéral (repliable sur mobile) et contenu.
+  function shell(o) {
+    var aside;
+    var current = '';
+    var secs = o.nav.map(function (sec) {
+      return h('div', { class: 'ec-nav-sec' }, [h('p', { class: 'ec-nav-title', text: sec.title }),
+        h('ul', {}, sec.items.map(function (it) {
+          var on = it.id === o.active;
+          if (on) current = it.label;
+          return h('li', {}, [h('a', { href: it.href || '#' + it.id, class: on ? 'on' : null, 'aria-current': on ? 'page' : null,
+            target: it.href ? '_blank' : null, rel: it.href ? 'noopener' : null, onclick: function () { aside.classList.remove('open'); } },
+            [icon(it.icon), h('span', { text: it.label }), it.badge ? h('b', { class: 'ec-nav-badge', text: String(it.badge) }) : null])]);
+        }))]);
+    });
+    var toggle = h('button', { class: 'ec-menu-btn', type: 'button', 'aria-expanded': 'false', onclick: function () {
+      toggle.setAttribute('aria-expanded', String(aside.classList.toggle('open')));
+    } }, [icon('menu'), h('span', { text: o.label }), h('small', { text: current })]);
+    var initials = (o.who || '?').split(/\s+/).map(function (w) { return w[0] || ''; }).join('').slice(0, 2).toUpperCase();
+    aside = h('aside', { class: 'ec-aside' }, [
+      h('div', { class: 'ec-who' }, [h('span', { class: 'ec-avatar', 'aria-hidden': 'true', text: initials }), h('span', {}, [h('b', { text: o.who }), h('small', { text: o.whoSub || '' })])]),
+      h('nav', { 'aria-label': o.label }, secs),
+      h('button', { class: 'ec-nav-out', type: 'button', onclick: o.logout }, [icon('sortie'), h('span', { text: 'Déconnexion' })])]);
+    return h('div', { class: 'ec-shell' }, [toggle, aside, h('div', { class: 'ec-main' }, [
+      h('header', { class: 'ec-head' }, [h('div', {}, [h('p', { class: 'label', text: o.kicker }), h('h1', { class: 'ec-title sm', text: o.title })]),
+        o.actions ? h('div', { class: 'ec-head-act' }, o.actions) : null]),
+      o.body])]);
+  }
+  function kpi(label, value, sub, href, tone) {
+    return h('a', { class: 'ec-kpi' + (tone ? ' ' + tone : ''), href: href }, [h('span', { class: 'ec-kpi-label', text: label }), h('b', { text: String(value) }), sub ? h('small', { text: sub }) : null]);
+  }
+  function secHead(title, href, more) {
+    return h('div', { class: 'ec-sec-head' }, [h('h2', { class: 'ec-h2', text: title }), href ? h('a', { class: 'ec-more', href: href, text: (more || 'Tout voir') + ' →' }) : null]);
+  }
+  function empty(text) { return h('p', { class: 'ec-muted', text: text }); }
+  function total(list) { return list.reduce(function (a, d) { return a + (+d.montant || 0); }, 0); }
+  function bar(v) {
+    return h('div', { class: 'ec-bar', role: 'progressbar', 'aria-valuenow': v, 'aria-valuemin': 0, 'aria-valuemax': 100, 'aria-label': 'Avancement' }, [h('i', { style: 'width:' + v + '%' })]);
+  }
+  E.icon = icon; E.shell = shell; E.kpi = kpi; E.secHead = secHead; E.empty = empty; E.total = total; E.bar = bar;
 
   function projetCard(pr) {
     return h('article', { class: 'ec-projet' }, [
@@ -253,69 +318,165 @@
       h('ol', { class: 'ec-stepper' }, ETAPES.map(function (n, i) {
         return h('li', { class: i + 1 < pr.etape ? 'done' : i + 1 === pr.etape ? 'now' : '' }, [h('span', { text: '0' + (i + 1) }), n]);
       })),
-      h('div', { class: 'ec-bar', role: 'progressbar', 'aria-valuenow': pr.progression, 'aria-valuemin': 0, 'aria-valuemax': 100, 'aria-label': 'Avancement' }, [h('i', { style: 'width:' + pr.progression + '%' })]),
+      bar(pr.progression),
       h('p', { class: 'ec-meta', text: pr.progression + ' % · mis à jour le ' + date(pr.updated_at) + (pr.echeance ? ' · mise en ligne prévue le ' + date(pr.echeance) : '') })
     ]);
   }
   E.projetCard = projetCard;
 
-  function docRow(d, extra) {
-    var dl = h('button', { class: 'ec-textbtn', type: 'button', text: 'Télécharger', onclick: function () {
+  function download(d) {
+    return h('button', { class: 'ec-textbtn', type: 'button', text: 'Télécharger', onclick: function () {
       sb.storage.from('documents').createSignedUrl(d.chemin, 120, { download: d.nom }).then(function (r) { if (r.data) location.href = r.data.signedUrl; });
     } });
+  }
+  function docRow(d, extra) {
     return h('li', { class: 'ec-doc' }, [h('span', { class: 'ec-badge t-' + d.type, text: TYPES[d.type] || d.type }),
       h('span', { class: 'ec-doc-name' }, [h('b', { text: d.nom }), h('small', { text: date(d.created_at) + (d.statut ? ' · ' + d.statut : '') })]),
-      h('span', { class: 'ec-doc-amount', text: d.montant != null ? eur.format(d.montant) : '' }), h('span', { class: 'ec-doc-act' }, [dl, extra])]);
+      h('span', { class: 'ec-doc-amount', text: d.montant != null ? eur.format(d.montant) : '' }), h('span', { class: 'ec-doc-act' }, [download(d), extra])]);
   }
-  E.docRow = docRow;
+  E.download = download; E.docRow = docRow;
 
+  function bubble(m, mine) {
+    return h('div', { class: 'ec-msg ' + (m.auteur === mine ? 'me' : 'them') }, [h('p', { text: m.contenu }), h('small', { text: (m.auteur === 'acha' ? 'ACHA · ' : '') + dateTime(m.created_at) })]);
+  }
   function thread(list, mine) {
-    var box = h('div', { class: 'ec-thread' }, list.length ? list.map(function (m) {
-      return h('div', { class: 'ec-msg ' + (m.auteur === mine ? 'me' : 'them') }, [h('p', { text: m.contenu }), h('small', { text: (m.auteur === 'acha' ? 'ACHA · ' : '') + dateTime(m.created_at) })]);
-    }) : [h('p', { class: 'ec-muted', text: 'Aucun message pour le moment.' })]);
+    var box = h('div', { class: 'ec-thread' }, list.length ? list.map(function (m) { return bubble(m, mine); }) : [empty('Aucun message pour le moment.')]);
     setTimeout(function () { box.scrollTop = box.scrollHeight; }, 0);
     return box;
   }
-  E.thread = thread;
+  E.bubble = bubble; E.thread = thread;
 
-  function viewDashboard(p) {
-    var wrap = h('div', { class: 'ec-dash' }, [h('p', { class: 'ec-muted', text: 'Chargement…' })]);
-    Promise.all([
+  // ---------- espace du client validé ----------
+  var S = null; // données du client connecté
+  function seenKey() { return 'acha-ec-vu-' + S.p.id; }
+  function lastSeen() { try { return localStorage.getItem(seenKey()) || ''; } catch (e) { return ''; } }
+  function markSeen() { try { localStorage.setItem(seenKey(), new Date().toISOString()); } catch (e) {} }
+  function unread() { var s = lastSeen(); return S.msgs.filter(function (m) { return m.auteur === 'acha' && m.created_at > s; }).length; }
+  function docsOf(type) { return S.docs.filter(function (d) { return d.type === type; }); }
+  function docList(list) { return h('ul', { class: 'ec-docs' }, list.map(function (d) { return docRow(d); })); }
+
+  function load(p) {
+    return Promise.all([
       sb.from('projets').select('*').order('created_at', { ascending: false }),
       sb.from('documents').select('*').order('created_at', { ascending: false }),
       sb.from('messages').select('*').order('created_at')
-    ]).then(function (res) {
-      var projets = res[0].data || [], docs = res[1].data || [], msgs = res[2].data || [];
+    ]).then(function (res) { S = { p: p, projets: res[0].data || [], docs: res[1].data || [], msgs: res[2].data || [] }; });
+  }
+  function app(p) { root.replaceChildren(h('p', { class: 'ec-loading', text: 'Chargement…' })); load(p).then(function () { render(true); }); }
+  function logout() { sb.auth.signOut().then(function () { S = null; history.replaceState(null, '', location.pathname); viewLogin(); }); }
+
+  var CLIENT = {
+    'tableau-de-bord': function () {
+      var actifs = S.projets.filter(function (pr) { return pr.statut !== 'termine'; });
+      var main = actifs[0] || S.projets[0];
+      var devis = docsOf('devis').filter(function (d) { return d.statut === 'à signer'; });
+      var fact = docsOf('facture').filter(function (d) { return d.statut === 'à payer'; });
+      var n = unread();
+      var last = S.msgs[S.msgs.length - 1];
+      return { title: 'Bonjour ' + (S.p.prenom || ''), body: h('div', { class: 'ec-stack' }, [
+        h('div', { class: 'ec-kpis' }, [
+          kpi('Votre projet', main ? main.progression + ' %' : '—', main ? 'Étape ' + main.etape + ' · ' + ETAPES[main.etape - 1] : 'Bientôt lancé', '#projets', 'acc'),
+          kpi('Devis à signer', devis.length, devis.length ? eur.format(total(devis)) : 'Rien en attente', '#devis', devis.length ? 'warn' : ''),
+          kpi('Factures à régler', eur.format(total(fact)), fact.length ? fact.length + ' facture' + (fact.length > 1 ? 's' : '') : 'Tout est réglé', '#factures', fact.length ? 'warn' : ''),
+          kpi('Messages', n, n ? (n > 1 ? 'nouveaux messages' : 'nouveau message') : (last ? 'À jour · dernier échange le ' + date(last.created_at) : 'Écrivez-nous'), '#messages', n ? 'acc' : '')]),
+        h('section', { class: 'ec-block' }, [secHead('Votre projet', S.projets.length > 1 ? '#projets' : null, 'Tous mes projets'),
+          main ? projetCard(main) : empty('Votre projet apparaîtra ici dès son lancement.')]),
+        h('div', { class: 'ec-dash' }, [
+          h('section', { class: 'ec-block' }, [secHead('Derniers documents'), S.docs.length ? docList(S.docs.slice(0, 4)) : empty('Vos devis, factures et documents apparaîtront ici.')]),
+          h('section', { class: 'ec-block' }, [secHead('Dernier message', '#messages', 'Ouvrir la messagerie'), last ? h('div', { class: 'ec-thread' }, [bubble(last, 'client')]) : empty('Une question ? Écrivez à l\'équipe depuis la messagerie.')])])])};
+    },
+    projets: function () {
+      return { title: 'Mes projets', body: h('section', { class: 'ec-block' }, [S.projets.length ? h('div', { class: 'ec-projets' }, S.projets.map(projetCard)) : empty('Votre projet apparaîtra ici dès son lancement.')]) };
+    },
+    messages: function () {
       var text = h('textarea', { rows: 3, required: true, maxlength: 5000, placeholder: 'Votre message à l\'équipe…' });
       var err = h('div');
       var send = h('button', { class: 'btn primary', type: 'submit', text: 'Envoyer' });
-      wrap.replaceChildren(
-        h('section', { class: 'ec-block ec-span' }, [h('h2', { class: 'ec-h2', text: 'Vos projets' }),
-          projets.length ? h('div', { class: 'ec-projets' }, projets.map(projetCard)) : h('p', { class: 'ec-muted', text: 'Votre projet apparaîtra ici dès son lancement.' })]),
-        h('section', { class: 'ec-block' }, [h('h2', { class: 'ec-h2', text: 'Devis, factures et documents' }),
-          docs.length ? h('ul', { class: 'ec-docs' }, docs.map(function (d) { return docRow(d); })) : h('p', { class: 'ec-muted', text: 'Aucun document pour le moment.' })]),
-        h('section', { class: 'ec-block' }, [h('h2', { class: 'ec-h2', text: 'Messages' }), thread(msgs, 'client'),
-          h('form', { class: 'ec-form ec-send', onsubmit: function (e) {
-            e.preventDefault(); err.replaceChildren();
-            var v = text.value.trim(); if (!v) return;
-            busy(send, true, 'Envoyer');
-            sb.from('messages').insert({ client_id: p.id, auteur: 'client', contenu: v }).then(function (r) {
-              busy(send, false, 'Envoyer');
-              if (r.error) { err.append(alertBox(frError(r.error))); return; }
-              notify('message-client', { societe: p.societe, email: p.email, message: v });
-              show(viewDashboard(p));
+      return { title: 'Messages', body: h('section', { class: 'ec-block' }, [thread(S.msgs, 'client'),
+        h('form', { class: 'ec-form ec-send', onsubmit: function (e) {
+          e.preventDefault(); err.replaceChildren();
+          var v = text.value.trim(); if (!v) return;
+          busy(send, true, 'Envoyer');
+          sb.from('messages').insert({ client_id: S.p.id, auteur: 'client', contenu: v }).then(function (r) {
+            busy(send, false, 'Envoyer');
+            if (r.error) { err.append(alertBox(frError(r.error))); return; }
+            notify('message-client', { societe: S.p.societe, email: S.p.email, message: v });
+            load(S.p).then(function () { render(false); });
+          });
+        } }, [h('label', { class: 'f' }, ['Nouveau message', text]), err, send])]) };
+    },
+    devis: function () { return docsView('devis', 'Mes devis', 'Vos devis apparaîtront ici.', 'à signer', 'À signer'); },
+    factures: function () { return docsView('facture', 'Mes factures', 'Vos factures apparaîtront ici.', 'à payer', 'Reste à régler'); },
+    documents: function () { return docsView('document', 'Mes documents', 'Maquettes, accès, guides : vos documents apparaîtront ici.'); },
+    entreprise: function () {
+      var p = S.p;
+      return { title: 'Mon entreprise', body: h('section', { class: 'ec-block' }, [
+        h('dl', { class: 'ec-dl' }, [
+          h('dt', { text: 'Raison sociale' }), h('dd', { text: p.societe }),
+          h('dt', { text: 'SIRET' }), h('dd', { text: p.siret.replace(/(\d{3})(\d{3})(\d{3})(\d{5})/, '$1 $2 $3 $4') }),
+          h('dt', { text: 'Contact' }), h('dd', { text: p.prenom + ' ' + p.nom }),
+          h('dt', { text: 'E-mail' }), h('dd', { text: p.email }),
+          h('dt', { text: 'Téléphone' }), h('dd', { text: p.telephone || '—' }),
+          h('dt', { text: 'Compte' }), h('dd', {}, [h('span', { class: 'ec-badge p-valide', text: 'Validé' }), p.validated_at ? ' depuis le ' + date(p.validated_at) : '']),
+          h('dt', { text: 'Kbis' }), h('dd', {}, [p.kbis_path ? h('button', { class: 'ec-textbtn', type: 'button', text: 'Voir mon Kbis', onclick: function () {
+            sb.storage.from('kbis').createSignedUrl(p.kbis_path, 120).then(function (r) { if (r.data) window.open(r.data.signedUrl, '_blank', 'noopener'); });
+          } }) : '—'])]),
+        h('p', { class: 'ec-hint' }, ['Une information a changé ? ', h('a', { href: '#messages', text: 'Écrivez-nous' }), ' et nous la mettons à jour.'])]) };
+    },
+    parametres: function () {
+      var err = h('div');
+      var pass = h('input', { type: 'password', autocomplete: 'new-password', minlength: 8, required: true });
+      var btn = h('button', { class: 'btn primary', type: 'submit', text: 'Changer le mot de passe' });
+      return { title: 'Paramètres', body: h('div', { class: 'ec-dash' }, [
+        h('section', { class: 'ec-block' }, [h('h2', { class: 'ec-h2', text: 'Mot de passe' }),
+          h('form', { class: 'ec-form', onsubmit: function (e) {
+            e.preventDefault(); busy(btn, true, 'Changer le mot de passe');
+            sb.auth.updateUser({ password: pass.value }).then(function (r) {
+              busy(btn, false, 'Changer le mot de passe');
+              err.replaceChildren(r.error ? alertBox(frError(r.error)) : alertBox('Mot de passe modifié.', 'ok'));
+              if (!r.error) pass.value = '';
             });
-          } }, [h('label', { class: 'f' }, ['Nouveau message', text]), err, send])])
-      );
-    });
-    return page(p, wrap, true);
+          } }, [h('label', { class: 'f' }, ['Nouveau mot de passe (8 caractères minimum)', pass]), err, btn])]),
+        h('section', { class: 'ec-block' }, [h('h2', { class: 'ec-h2', text: 'Connexion' }),
+          h('p', { class: 'ec-muted' }, ['Vous êtes connecté avec ', h('b', { text: S.p.email }), '.']),
+          h('div', { class: 'ec-actions' }, [h('button', { class: 'btn ghost', type: 'button', text: 'Se déconnecter', onclick: logout })])])]) };
+    }
+  };
+
+  function docsView(type, title, emptyText, pending, pendingLabel) {
+    var list = docsOf(type);
+    var wait = pending ? list.filter(function (d) { return d.statut === pending; }) : [];
+    return { title: title, body: h('section', { class: 'ec-block' }, [
+      wait.length ? h('div', { class: 'ec-sums' }, [h('span', { class: 'ec-sum' }, [pendingLabel + ' : ', h('b', { text: eur.format(total(wait)) }), ' · ' + wait.length + ' document' + (wait.length > 1 ? 's' : '')])]) : null,
+      list.length ? docList(list) : empty(emptyText)]) };
   }
 
-  function page(p, body, dash) {
+  function clientNav() {
+    var devis = docsOf('devis').filter(function (d) { return d.statut === 'à signer'; }).length;
+    var fact = docsOf('facture').filter(function (d) { return d.statut === 'à payer'; }).length;
+    return [
+      { title: 'Mon espace', items: [{ id: 'tableau-de-bord', label: 'Tableau de bord', icon: 'grid' }, { id: 'projets', label: 'Mes projets', icon: 'projet' },
+        { id: 'messages', label: 'Messages', icon: 'msg', badge: unread() }] },
+      { title: 'Documents', items: [{ id: 'devis', label: 'Mes devis', icon: 'devis', badge: devis }, { id: 'factures', label: 'Mes factures', icon: 'facture', badge: fact },
+        { id: 'documents', label: 'Mes documents', icon: 'doc' }] },
+      { title: 'Compte', items: [{ id: 'entreprise', label: 'Mon entreprise', icon: 'entreprise' }, { id: 'parametres', label: 'Paramètres', icon: 'reglages' }] }];
+  }
+
+  function render(top) {
+    var id = location.hash.slice(1);
+    if (!CLIENT[id]) id = 'tableau-de-bord';
+    if (id === 'messages') markSeen();
+    var v = CLIENT[id]();
+    root.replaceChildren(shell({ label: 'Espace client', who: S.p.prenom + ' ' + S.p.nom, whoSub: S.p.societe, nav: clientNav(), active: id,
+      kicker: 'Espace client · ' + (S.p.societe || ''), title: v.title, body: v.body, logout: logout }));
+    if (top) window.scrollTo(0, 0);
+  }
+
+  function page(p, body) {
     return h('div', { class: 'ec-page' }, [
       h('header', { class: 'ec-head' }, [h('div', {}, [h('p', { class: 'label', text: 'Espace client' + (p.societe ? ' · ' + p.societe : '') }),
-        h('h1', { class: 'ec-title sm', text: dash ? 'Bonjour ' + (p.prenom || '') : 'Votre compte professionnel' })]),
-        h('button', { class: 'btn ghost', type: 'button', text: 'Se déconnecter', onclick: function () { sb.auth.signOut().then(function () { viewLogin(); }); } })]),
+        h('h1', { class: 'ec-title sm', text: 'Votre compte professionnel' })]),
+        h('button', { class: 'btn ghost', type: 'button', text: 'Se déconnecter', onclick: logout })]),
       body]);
   }
 
@@ -330,12 +491,13 @@
       sb.from('profiles').select('*').eq('id', session.user.id).maybeSingle().then(function (r) {
         var p = r.data;
         if (!p) return show(h('div', { class: 'ec-card ec-narrow' }, [alertBox('Profil introuvable. Écrivez-nous à contact@acha-company.fr.')]));
-        if (p.statut === 'valide') return show(viewDashboard(p));
+        if (p.statut === 'valide') return app(p);
         if (p.statut === 'en_attente') return show(viewPending(p));
         return show(viewKbis(p));
       });
     });
   }
+  window.addEventListener('hashchange', function () { if (S) render(true); });
   sb.auth.onAuthStateChange(function (ev) { if (ev === 'PASSWORD_RECOVERY') { recovery = false; viewNewPassword(); } });
   route();
 })();
