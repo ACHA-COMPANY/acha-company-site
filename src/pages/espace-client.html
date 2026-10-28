@@ -1,0 +1,20 @@
+<!--
+nav: espace
+-->
+<section class="band ec"><div class="in">
+  <div class="ec-app" data-ec>
+    <p class="ec-loading">Chargement de votre espace…</p>
+  </div>
+  <noscript><p class="lead">L'espace client a besoin de JavaScript.</p></noscript>
+</div></section>
+
+<!-- Formulaires lus par Netlify pour prévenir ACHA par e-mail (envoyés en arrière-plan par espace.js) -->
+<form name="inscription-pro" data-netlify="true" netlify-honeypot="societe-web" hidden>
+  <input name="societe"><input name="siret"><input name="email"><input name="nom"><input name="telephone"><input name="siret-verifie"><input name="societe-web">
+</form>
+<form name="message-client" data-netlify="true" netlify-honeypot="societe-web" hidden>
+  <input name="societe"><input name="email"><textarea name="message"></textarea><input name="societe-web">
+</form>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js" defer></script>
+<script src="/assets/espace-config.js?v={{v}}" defer></script>
+<script src="/assets/espace.js?v={{v}}" defer></script>

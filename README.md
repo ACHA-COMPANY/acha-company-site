@@ -49,3 +49,17 @@ Chaque modification poussée sur la branche principale met le site à jour autom
 
 - Adresse e-mail de contact réelle (aujourd'hui `contact@acha-company.fr`).
 - Logo définitif, si l'identité provisoire est remplacée.
+
+## Espace client (/espace-client)
+
+Comptes professionnels : inscription avec SIRET (clé de contrôle + registre des entreprises), envoi du Kbis, validation par ACHA, puis suivi de projet, devis, factures, documents et messages. La gestion se fait sur /espace-client-admin (page non référencée).
+
+Données, comptes et fichiers : [Supabase](https://supabase.com), offre gratuite. Mise en route, une seule fois :
+
+1. Créer un compte et un projet Supabase (région Europe).
+2. SQL Editor > New query : coller `supabase/schema.sql`, puis Run. Les règles d'accès y sont : un client ne voit que ses propres données, et seulement une fois validé.
+3. Authentication > URL Configuration : Site URL `https://www.acha-company.fr`, Redirect URL `https://www.acha-company.fr/espace-client`.
+4. Project Settings > API : copier le Project URL et la clé `anon` dans `static/assets/espace-config.js`. Cette clé est publique par conception ; ne jamais y mettre la clé `service_role`.
+5. S'inscrire sur /espace-client avec anissa@acha-company.fr : cette adresse figure dans la table `admins` et ouvre /espace-client-admin.
+
+Tant que `espace-config.js` est vide, la page affiche « Bientôt disponible ». Les notifications e-mail passent par les formulaires Netlify `inscription-pro` et `message-client`.

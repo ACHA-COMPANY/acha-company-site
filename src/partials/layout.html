@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{{title}}</title>
 <meta name="description" content="{{description}}">
-<meta property="og:title" content="{{title}}">
+{{robots}}<meta property="og:title" content="{{title}}">
 <meta property="og:description" content="{{description}}">
 <meta property="og:type" content="website">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -36,11 +36,13 @@
   <nav class="main" aria-label="Navigation principale">
 {{nav}}
   </nav>
+  <a class="bar-link" href="/espace-client">{{t:commun-025}}</a>
   <a class="btn primary" href="/contact">{{t:commun-004}}</a>
   <details class="menu">
     <summary>{{t:commun-005}}</summary>
     <nav aria-label="Navigation mobile">
 {{nav}}
+      <a href="/espace-client">{{t:commun-025}}</a>
       <a href="/contact">{{t:commun-006}}</a>
     </nav>
   </details>

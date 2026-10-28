@@ -12,6 +12,7 @@ Chaque page commence par un bloc d'en-tête :
 (titre et description : dans content/textes/<page>.json)
 nav: studio            (lien du menu à marquer comme page courante, facultatif)
 path: /studio          (adresse publique, facultatif)
+robots: noindex        (page à ne pas référencer, facultatif)
 -->
 Lancer : python3 build.py
 """
@@ -134,11 +135,11 @@ def main():
     year = str(datetime.date.today().year)
     # Les fichiers de /assets/ sont gardés 7 jours en cache : on ajoute une empreinte
     # de leur contenu à l'adresse pour que chaque nouvelle version soit rechargée.
-    assets = b"".join((ROOT / "static" / "assets" / f).read_bytes() for f in ("style.css", "site.js", "devis.js"))
+    assets = b"".join((ROOT / "static" / "assets" / f).read_bytes() for f in ("style.css", "site.js", "devis.js", "espace.js", "espace-admin.js", "espace-config.js"))
     version = hashlib.sha1(assets).hexdigest()[:10]
     for page in sorted((SRC / "pages").glob("*.html")):
         meta, body = parse(page.read_text(encoding="utf-8"))
-        data = load(f"textes/{page.stem}.json")
+        data = load(f"textes/{page.stem}.json") if (CONTENT / "textes" / f"{page.stem}.json").exists() else {}
         body = fill_texts(body, {x["id"]: x["texte"] for x in data.get("textes", [])}, page.stem)
         if "{{partenaires}}" in body:
             body = body.replace("{{partenaires}}", partners_html())
@@ -150,6 +151,7 @@ def main():
                 .replace("{{content}}", body.strip())
                 .replace("{{title}}", title)
                 .replace("{{description}}", description)
+                .replace("{{robots}}", f'<meta name="robots" content="{html.escape(meta["robots"])}">\n' if meta.get("robots") else "")
                 .replace("{{nav}}", nav_html(meta.get("nav")))
                 .replace("{{year}}", year)
                 .replace("{{v}}", version))

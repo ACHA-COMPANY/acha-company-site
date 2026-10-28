@@ -21,6 +21,11 @@
       "texte": "Parler d'un projet"
     },
     {
+      "id": "commun-025",
+      "zone": "Menu · Lien ou bouton",
+      "texte": "Espace client"
+    },
+    {
       "id": "commun-005",
       "zone": "Menu · Petit texte",
       "texte": "Menu"
