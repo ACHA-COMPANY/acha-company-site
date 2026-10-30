@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ACHA COMPANY · Bientôt</title>
+<meta name="description" content="Créer, vendre, grandir, recommencer. Le site d'ACHA COMPANY est en construction : revenez très bientôt.">
+<meta property="og:title" content="ACHA COMPANY · Bientôt">
+<meta property="og:description" content="Créer, vendre, grandir, recommencer. Notre site est en construction.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1a0b20">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+/* Page « bientôt » : toujours sombre, prune et orchidée. */
+:root {
+  --bg: #1a0b20; --bg-2: #2b1335; --plum: #3b1c47; --orchid: #e7a6d0; --orchid-2: #b8578f;
+  --text: #f7eff9; --text-2: #c9b5d2; --mute: #8f7a99; --line: rgba(231,166,208,.22);
+  --f-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --f-serif: "Instrument Serif", Georgia, serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { min-height: 100%; }
+body { background: var(--bg); color: var(--text); font: 400 16px/1.6 var(--f-body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--orchid); outline-offset: 3px; border-radius: 4px; }
+
+.page { position: relative; min-height: 100svh; display: flex; flex-direction: column; isolation: isolate; overflow: hidden; }
+.page::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(460px circle at var(--mx, 70%) var(--my, 25%), rgba(231,166,208,.14), transparent 70%); }
+.blobs { position: absolute; inset: 0; z-index: -2; pointer-events: none; }
+.blobs i { position: absolute; border-radius: 50%; filter: blur(80px); opacity: .5; }
+.blobs i:nth-child(1) { width: 560px; height: 560px; background: var(--orchid-2); right: -160px; top: -200px; animation: drift 18s ease-in-out infinite alternate; }
+.blobs i:nth-child(2) { width: 420px; height: 420px; background: #5b2a78; left: -160px; top: 30%; animation: drift 22s ease-in-out infinite alternate-reverse; }
+.blobs i:nth-child(3) { width: 280px; height: 280px; background: var(--orchid); left: 50%; bottom: 10%; opacity: .18; animation: drift 15s ease-in-out infinite alternate; }
+@keyframes drift { to { transform: translate(-60px, 50px) scale(1.15); } }
+.grain { position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .5;
+  background-image: radial-gradient(rgba(247,239,249,.07) 1px, transparent 1px); background-size: 22px 22px;
+  mask-image: linear-gradient(to bottom, #000, transparent 70%); -webkit-mask-image: linear-gradient(to bottom, #000, transparent 70%); }
+
+.wrap { width: 100%; max-width: 1180px; margin-inline: auto; padding-inline: max(16px, env(safe-area-inset-left, 0px)); }
+
+/* en-tête */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 26px; }
+.logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo svg { width: 30px; height: 30px; }
+.logo b { display: block; font: 800 17px/1 var(--f-display); font-stretch: 125%; letter-spacing: .01em; }
+.logo span { display: block; margin-top: 4px; font: 500 9.5px/1 var(--f-mono); letter-spacing: .42em; color: var(--text-2); }
+.mail { font: 500 13px/1 var(--f-mono); color: var(--text-2); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 4px; transition: color .2s, border-color .2s; }
+.mail:hover { color: var(--orchid); border-color: var(--orchid); }
+
+/* titre */
+.hero { padding-top: clamp(40px, 8vh, 88px); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: end; }
+.kicker { display: inline-flex; align-items: center; gap: 10px; font: 700 12px/1 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: #d9c4e1;
+  border: 1px solid rgba(231,166,208,.35); border-radius: 999px; padding: 9px 14px; }
+.pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--orchid); animation: pulse 2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(231,166,208,.6); } 70% { box-shadow: 0 0 0 10px rgba(231,166,208,0); } 100% { box-shadow: 0 0 0 0 rgba(231,166,208,0); } }
+h1 { margin-top: 26px; font: 800 clamp(40px, 7vw, 96px)/.95 var(--f-display); font-stretch: 118%; letter-spacing: -.035em; }
+h1 .ln { display: block; overflow: hidden; padding-bottom: .07em; }
+h1 .ln > span { display: inline-block; animation: up .9s cubic-bezier(.2,.8,.2,1) both; }
+h1 .ln:nth-child(2) > span { animation-delay: .12s; }
+h1 .ln:nth-child(3) > span { animation-delay: .24s; }
+@keyframes up { from { transform: translateY(105%); } }
+h1 .outline { color: transparent; -webkit-text-stroke: 2px var(--orchid); }
+h1 .word { position: relative; display: inline-block; font: italic 400 1.1em/1 var(--f-serif); letter-spacing: -.01em; color: var(--orchid); }
+h1 .word span { display: inline-block; transition: transform .55s cubic-bezier(.2,.8,.2,1), opacity .55s; }
+h1 .word span.out { transform: translateY(-60%); opacity: 0; }
+h1 .word span.in { transform: translateY(60%); opacity: 0; transition: none; }
+.lead { margin-top: 26px; max-width: 34em; font-size: 18px; line-height: 1.6; color: var(--text-2); }
+
+/* logo-slogan : un mot par case */
+.tiles { display: grid; grid-template-columns: repeat(2, 132px); gap: 10px; }
+.tiles li { list-style: none; height: 132px; border-radius: 14px; padding: 14px; display: flex; align-items: flex-end;
+  font: 700 12px/1.2 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s; }
+.tiles li:nth-child(1) { background: var(--plum); color: var(--text); box-shadow: inset 0 0 0 1px rgba(247,239,249,.16); }
+.tiles li:nth-child(2) { background: var(--orchid); color: #22142a; }
+.tiles li:nth-child(3) { background: #f4eef8; color: #22142a; }
+.tiles li:nth-child(4) { border: 2px dashed #b9a7c0; color: var(--text-2); }
+.tiles li.on { transform: translateY(-6px) rotate(-2deg); box-shadow: 0 18px 40px -18px rgba(231,166,208,.7); }
+
+/* chantier */
+.site { position: relative; margin-top: auto; padding-top: 28px; }
+.scene { position: relative; width: 100%; overflow: hidden; }
+.scene svg { display: block; width: max(100%, 640px); height: auto; position: relative; left: 50%; transform: translateX(-50%); overflow: visible; }
+.scene svg * { transform-box: fill-box; }
+.s-ground { stroke: var(--line); stroke-width: 1.5; }
+.limb { fill: none; stroke: var(--text); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.head { fill: var(--text); }
+.thin { fill: none; stroke: var(--text); stroke-width: 1.5; stroke-linecap: round; }
+.frame { fill: var(--bg-2); stroke: var(--text); stroke-width: 1.5; }
+.bar-t { fill: rgba(247,239,249,.06); }
+.dot { fill: var(--mute); }
+.crane { fill: none; stroke: var(--mute); stroke-width: 2; stroke-linejoin: round; }
+.crane-s { fill: var(--mute); }
+.b-or { fill: var(--orchid); } .b-pl { fill: #8d6a9c; } .b-li { fill: rgba(247,239,249,.85); } .b-mu { fill: #5d3f6b; }
+.box { fill: var(--orchid); stroke: var(--text); stroke-width: 1.5; }
+
+/* pièces du site, posées une par une */
+.pc { opacity: 0; transform: translateY(-18px) scale(.9); transform-origin: 50% 100%; transition: opacity .45s, transform .6s cubic-bezier(.3,1.6,.5,1); }
+.pc.on { opacity: 1; transform: none; }
+.reset .pc { transition: opacity .6s; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .bob { animation: bob 2.4s ease-in-out infinite; }
+  .f2 .bob, .f4 .bob { animation-delay: -1.2s; }
+  .place { transform-origin: 0 0; animation: place 2.8s ease-in-out infinite; }
+  .type { transform-origin: 100% 0; animation: type .45s ease-in-out infinite alternate; }
+  .type.t2 { animation-delay: -.22s; }
+  .code { transform-origin: 0 50%; animation: code 2.4s steps(6) infinite; }
+  .code.c2 { animation-delay: .8s; } .code.c3 { animation-delay: 1.6s; }
+  .trolley { animation: trolley 9s ease-in-out infinite; }
+  .cable { transform-origin: 50% 0; animation: cable 9s ease-in-out infinite; }
+  .load { animation: load 9s ease-in-out infinite; }
+  .lever { transform-origin: 0 100%; animation: lever 9s ease-in-out infinite; }
+  .roller { transform-origin: 0 100%; animation: roll 2.2s ease-in-out infinite; }
+  .wave { transform-origin: 0 100%; animation: wave 1.6s ease-in-out infinite; }
+  .legs { transform-origin: 50% 0; animation: swing 1.6s ease-in-out infinite alternate; }
+  .walker { animation: cross 11s linear infinite; }
+  .walker .bob { animation: walk .45s ease-in-out infinite alternate; }
+  .spark { opacity: 0; transform-origin: 50% 50%; animation: spark 3.6s ease-out infinite; }
+  .sp2 { animation-delay: 1.2s; } .sp3 { animation-delay: 2.4s; }
+  .flag { transform-origin: 0 50%; animation: flag 1.2s ease-in-out infinite alternate; }
+}
+@keyframes bob { 50% { transform: translateY(-2px); } }
+@keyframes place { 0%, 100% { transform: rotate(0); } 45%, 60% { transform: rotate(-16deg); } }
+@keyframes type { to { transform: rotate(-10deg); } }
+@keyframes code { 0% { transform: scaleX(.1); } 100% { transform: scaleX(1); } }
+@keyframes trolley { 0%, 100% { transform: translateX(0); } 30%, 70% { transform: translateX(-110px); } }
+@keyframes cable { 0%, 30% { transform: scaleY(1); } 45%, 55% { transform: scaleY(2.2); } 70%, 100% { transform: scaleY(1); } }
+@keyframes load { 0%, 30% { transform: translateY(0); } 45%, 55% { transform: translateY(66px); } 70%, 100% { transform: translateY(0); } }
+@keyframes lever { 0%, 100% { transform: rotate(14deg); } 30%, 70% { transform: rotate(-14deg); } }
+@keyframes roll { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(12deg); } }
+@keyframes wave { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(-28deg); } }
+@keyframes swing { from { transform: rotate(-8deg); } to { transform: rotate(10deg); } }
+@keyframes cross { 0% { transform: translateX(0); opacity: 0; } 8% { opacity: 1; } 88% { opacity: 1; } 100% { transform: translateX(230px); opacity: 0; } }
+@keyframes walk { from { transform: translateY(0); } to { transform: translateY(-3px); } }
+@keyframes spark { 0% { opacity: 0; transform: scale(.3) rotate(0); } 25% { opacity: 1; transform: scale(1) rotate(45deg); } 60% { opacity: 0; transform: scale(.6) rotate(90deg); } 100% { opacity: 0; } }
+@keyframes flag { from { transform: skewY(-6deg) scaleX(.94); } to { transform: skewY(6deg) scaleX(1); } }
+
+/* barre d'avancement */
+.progress { display: flex; align-items: center; gap: 16px; padding: 18px 0 0; border-top: 1px solid var(--line); font: 500 12px/1.3 var(--f-mono); letter-spacing: .06em; color: var(--text-2); }
+.progress .step { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.progress .track { flex: 0 1 260px; height: 4px; border-radius: 4px; background: rgba(247,239,249,.12); overflow: hidden; }
+.progress .fill { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--orchid-2), var(--orchid)); border-radius: 4px; transition: width .6s ease; }
+.progress .pct { width: 3.2em; text-align: right; color: var(--orchid); font-weight: 700; }
+
+/* prévenir */
+.notify { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 28px 48px; align-items: center; padding: 34px 0 30px; }
+.notify h2 { font: 800 clamp(22px, 2.6vw, 30px)/1.1 var(--f-display); font-stretch: 112%; letter-spacing: -.02em; }
+.notify h2 em { font: italic 400 1.12em/1 var(--f-serif); color: var(--orchid); }
+.notify p { margin-top: 8px; color: var(--text-2); font-size: 15px; }
+form { position: relative; display: flex; gap: 8px; padding: 6px; border-radius: 999px; background: rgba(247,239,249,.06); border: 1px solid rgba(231,166,208,.3); transition: border-color .2s; }
+form:focus-within { border-color: var(--orchid); }
+form input[type=email] { flex: 1; min-width: 0; background: none; border: 0; color: var(--text); font: 400 16px var(--f-body); padding: 12px 16px; outline: none; }
+form input::placeholder { color: var(--mute); }
+form button { border: 0; border-radius: 999px; background: var(--orchid); color: #22142a; font: 700 14px/1 var(--f-body); padding: 0 22px; cursor: pointer; white-space: nowrap; transition: transform .2s, background .2s; }
+form button:hover { background: #f1c3e1; transform: translateX(2px); }
+form button:disabled { opacity: .6; cursor: wait; }
+.hp { position: absolute; left: -9999px; }
+.done { display: none; font-size: 15px; color: var(--text); padding: 14px 4px; }
+.done b { color: var(--orchid); }
+.sent form { display: none; } .sent .done { display: block; }
+.fine { margin-top: 10px; font-size: 12.5px; color: var(--mute); }
+
+footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; padding: 18px 0 max(22px, env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); font-size: 13px; color: var(--mute); }
+footer a { color: var(--text-2); text-decoration: none; }
+footer a:hover { color: var(--orchid); }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; gap: 28px; }
+  .tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  .tiles li { height: auto; aspect-ratio: 1; padding: 9px; font-size: 9.5px; letter-spacing: .04em; border-radius: 10px; }
+  .notify { grid-template-columns: 1fr; }
+  .mail { display: none; }
+  .lead { font-size: 16px; }
+}
+@media (max-width: 420px) {
+  form { flex-direction: column; border-radius: 18px; }
+  form button { padding: 14px; }
+  .progress .track { flex-basis: 90px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .pc { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+<div class="page" id="page">
+  <div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="wrap top">
+    <a class="logo" href="/" aria-label="ACHA COMPANY">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="16" height="16" rx="3" fill="#3b1c47" stroke="rgba(247,239,249,.25)" stroke-width=".8"/><rect x="18" width="16" height="16" rx="3" fill="#e7a6d0"/><rect y="18" width="16" height="16" rx="3" fill="#f4eef8"/><rect x="18.75" y="18.75" width="14.5" height="14.5" rx="2.5" fill="none" stroke="#b9a7c0" stroke-width="1.5" stroke-dasharray="3 2"/></svg>
+      <div><b>ACHA</b><span>COMPANY</span></div>
+    </a>
+    <a class="mail" href="mailto:contact@acha-company.fr">contact@acha-company.fr</a>
+  </header>
+
+  <main id="contenu">
+    <section class="wrap hero">
+      <div>
+        <p class="kicker"><span class="pulse" aria-hidden="true"></span>Site en construction</p>
+        <h1 aria-label="On prépare quelque chose de beau.">
+          <span class="ln" aria-hidden="true"><span>On prépare</span></span>
+          <span class="ln" aria-hidden="true"><span class="outline">quelque chose</span></span>
+          <span class="ln" aria-hidden="true"><span>de <span class="word" id="word"><span>beau.</span></span></span></span>
+        </h1>
+        <p class="lead">Notre équipe met la dernière main à notre nouveau site. Encore un peu de patience&nbsp;: l'ouverture, c'est très bientôt.</p>
+      </div>
+      <ul class="tiles" id="tiles" aria-label="Créer, vendre, grandir, recommencer.">
+        <li>Créer</li><li>Vendre</li><li>Grandir</li><li>Recom&shy;mencer</li>
+      </ul>
+    </section>
+
+    <section class="site" aria-label="Petits personnages en train de construire le site">
+      <div class="scene" aria-hidden="true">
+        <svg viewBox="0 0 1200 380" focusable="false">
+          <path d="M0 360.5 H1200" class="s-ground"/>
+
+          <!-- grutier -->
+          <g class="f4" transform="translate(1000 360)"><g class="bob">
+            <rect x="12" y="-40" width="26" height="40" rx="3" fill="#5d3f6b"/>
+            <circle cx="25" cy="-28" r="3" class="b-or"/>
+            <path d="M-5 -26 L-8 0 M5 -26 L8 0" class="limb"/>
+            <rect x="-11" y="-58" width="22" height="34" rx="10" fill="#e7a6d0"/>
+            <circle cy="-68" r="9" class="head"/>
+            <g class="lever"><path d="M9 -50 L22 -42 L22 -56" class="limb"/></g>
+            <path d="M-9 -50 L-14 -30" class="limb"/>
+          </g></g>
+
+          <!-- la fenêtre du site -->
+          <rect x="400" y="96" width="400" height="264" rx="10" class="frame"/>
+          <path d="M400 106 a10 10 0 0 1 10 -10 H790 a10 10 0 0 1 10 10 V122 H400 Z" class="bar-t"/>
+          <path d="M400 122 H800" class="thin" opacity=".5"/>
+          <circle cx="416" cy="109" r="3.5" class="dot"/><circle cx="428" cy="109" r="3.5" class="dot"/><circle cx="440" cy="109" r="3.5" class="dot"/>
+          <rect x="470" y="103" width="170" height="12" rx="6" fill="rgba(247,239,249,.08)"/>
+          <g id="pieces">
+            <rect class="pc" x="416" y="134" width="40" height="12" rx="3" fill="#f4eef8"/>
+            <rect class="pc" x="600" y="137" width="184" height="6" rx="3" fill="#8d6a9c"/>
+            <rect class="pc" x="416" y="158" width="220" height="88" rx="6" fill="#e7a6d0"/>
+            <rect class="pc" x="650" y="162" width="134" height="12" rx="3" fill="#f4eef8"/>
+            <rect class="pc" x="650" y="182" width="106" height="8" rx="3" fill="#8d6a9c"/>
+            <rect class="pc" x="650" y="196" width="122" height="8" rx="3" fill="#8d6a9c"/>
+            <rect class="pc" x="650" y="222" width="64" height="20" rx="10" fill="#e7a6d0"/>
+            <rect class="pc" x="416" y="260" width="112" height="78" rx="6" fill="#5d3f6b"/>
+            <rect class="pc" x="544" y="260" width="112" height="78" rx="6" fill="#5d3f6b"/>
+            <rect class="pc" x="672" y="260" width="112" height="78" rx="6" fill="#5d3f6b"/>
+            <path class="pc" d="M430 172 c26-18 54 30 84 8 c22-16 44 10 60 -2 v58 h-144 z" fill="#b8578f" opacity=".6"/>
+          </g>
+
+          <!-- grue -->
+          <g>
+            <path d="M944 360 V44 M964 360 V44 M944 360 L964 330 L944 300 L964 270 L944 240 L964 210 L944 180 L964 150 L944 120 L964 90 L944 60" class="crane"/>
+            <path d="M600 40 H1040 V50 H600 Z" class="crane"/>
+            <path d="M620 50 L640 40 L660 50 L680 40 L700 50 L720 40 L740 50 L760 40 L780 50 L800 40 L820 50 L840 40 L860 50 L880 40 L900 50 L920 40 L940 50" class="crane"/>
+            <path d="M954 40 L954 14 M954 14 L620 40 M954 14 L1030 40" class="crane"/>
+            <rect x="1010" y="50" width="30" height="26" rx="2" class="crane-s"/>
+            <g class="trolley">
+              <rect x="752" y="50" width="20" height="8" rx="2" class="crane-s"/>
+              <rect x="761" y="58" width="2" height="40" class="cable" fill="#8f7a99"/>
+              <g class="load">
+                <path d="M762 98 V104 M752 112 L762 104 L772 112" class="thin"/>
+                <rect x="738" y="112" width="48" height="26" rx="3" class="b-or"/>
+                <path d="M746 121 H778 M746 129 H768" stroke="#22142a" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+              </g>
+            </g>
+          </g>
+          <!-- personnage assis sur la fenêtre, avec un fanion -->
+          <g transform="translate(500 96)">
+            <g class="legs"><path d="M-6 -4 L-4 16 M4 -4 L8 16" class="limb"/></g>
+            <rect x="-11" y="-36" width="22" height="34" rx="10" fill="#8d6a9c"/>
+            <circle cy="-46" r="9" class="head"/>
+            <path d="M-9 -26 L-16 -6" class="limb"/>
+            <g class="wave"><path d="M9 -28 L22 -52" class="limb"/><path d="M22 -52 L24 -82" class="thin" stroke-width="2"/><path class="flag" d="M24 -82 L52 -75 L24 -66 Z" fill="#e7a6d0"/></g>
+          </g>
+
+          <!-- échelle + poseur de blocs -->
+          <path d="M350 360 L366 150 M384 360 L400 150" class="thin" stroke-width="2.5"/>
+          <path d="M366 330 H384 M368 300 H386 M370 270 H388 M372 240 H390 M374 210 H392 M376 180 H394" class="thin" stroke-width="2.5"/>
+          <g class="f2" transform="translate(378 240)"><g class="bob">
+            <path d="M-5 -26 L-8 0 M5 -26 L2 -14 L8 -6" class="limb"/>
+            <rect x="-11" y="-58" width="22" height="34" rx="10" fill="#e7a6d0"/>
+            <circle cy="-68" r="9" class="head"/>
+            <g class="place"><path d="M9 -50 L34 -56" class="limb"/><rect x="32" y="-66" width="22" height="16" rx="2" fill="#f4eef8"/></g>
+            <path d="M-9 -50 L-6 -28" class="limb"/>
+          </g></g>
+
+          <!-- développeuse au bureau -->
+          <g>
+            <path d="M178 312 H286 M190 312 L184 360 M274 312 L280 360" class="limb" stroke-width="3"/>
+            <path d="M202 312 L210 276 H262 L256 312" class="frame"/>
+            <rect class="code" x="220" y="284" width="26" height="4" rx="2" fill="#e7a6d0"/>
+            <rect class="code c2" x="218" y="292" width="34" height="4" rx="2" fill="#8d6a9c"/>
+            <rect class="code c3" x="216" y="300" width="20" height="4" rx="2" fill="#8d6a9c"/>
+          </g>
+          <g class="f1" transform="translate(304 360)"><g class="bob">
+            <path d="M-5 -26 L-8 0 M5 -26 L8 0" class="limb"/>
+            <rect x="-11" y="-58" width="22" height="34" rx="10" fill="#8d6a9c"/>
+            <circle cy="-68" r="9" class="head"/>
+            <path d="M-9 -50 L-30 -46" class="limb type"/><path d="M-6 -48 L-28 -40" class="limb type t2"/>
+          </g></g>
+
+          <!-- peintre -->
+          <g transform="translate(852 360)"><g class="bob">
+            <path d="M-5 -26 L-8 0 M5 -26 L8 0" class="limb"/>
+            <rect x="-11" y="-58" width="22" height="34" rx="10" fill="#f4eef8"/>
+            <circle cy="-68" r="9" class="head"/>
+            <g class="roller"><path d="M-9 -50 L-30 -64" class="limb"/><path d="M-30 -64 L-42 -170" class="thin" stroke-width="2.5"/><rect x="-52" y="-196" width="12" height="30" rx="5" fill="#e7a6d0"/></g>
+            <path d="M9 -50 L14 -30" class="limb"/>
+          </g></g>
+
+          <!-- porteur de cartons -->
+          <g class="walker"><g transform="translate(40 360)"><g class="bob">
+            <path d="M-5 -26 L-8 0 M5 -26 L8 0" class="limb"/>
+            <rect x="-11" y="-58" width="22" height="34" rx="10" fill="#e7a6d0"/>
+            <circle cy="-68" r="9" class="head"/>
+            <rect x="-14" y="-56" width="30" height="24" rx="2" class="box"/><path d="M-14 -46 H16" class="thin" stroke="#22142a"/>
+            <path d="M-9 -50 L-15 -42" class="limb"/><path d="M9 -50 L15 -42" class="limb"/>
+          </g></g></g>
+
+          <!-- cartons livrés -->
+          <rect x="1090" y="328" width="34" height="32" rx="2" class="box"/>
+          <rect x="1126" y="338" width="26" height="22" rx="2" class="box" style="fill:#f4eef8"/>
+          <rect x="1098" y="302" width="24" height="26" rx="2" class="box" style="fill:#8d6a9c"/>
+
+          <!-- étincelles -->
+          <path class="spark" d="M560 70 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3z" fill="#e7a6d0"/>
+          <path class="spark sp2" d="M830 120 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z" fill="#f4eef8"/>
+          <path class="spark sp3" d="M330 120 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" fill="#e7a6d0"/>
+        </svg>
+      </div>
+      <div class="wrap">
+        <div class="progress" role="status" aria-live="off">
+          <span class="step" id="step">On pose les fondations…</span>
+          <span class="track" aria-hidden="true"><span class="fill" id="fill"></span></span>
+          <span class="pct" id="pct">0&nbsp;%</span>
+        </div>
+
+        <div class="notify" id="notify">
+          <div>
+            <h2>Soyez les <em>premiers</em> au courant.</h2>
+            <p>Laissez votre e-mail : nous vous écrirons une seule fois, le jour de l'ouverture.</p>
+          </div>
+          <div>
+            <form name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="societe-web" id="form">
+              <input type="hidden" name="form-name" value="contact">
+              <input type="hidden" name="message" value="Souhaite être prévenu(e) de l'ouverture du site.">
+              <p class="hp"><label>Ne pas remplir <input name="societe-web" tabindex="-1" autocomplete="off"></label></p>
+              <label class="hp" for="mail">Votre e-mail</label>
+              <input id="mail" name="email" type="email" autocomplete="email" required placeholder="votre@email.fr">
+              <button type="submit">Me prévenir →</button>
+            </form>
+            <p class="done" role="status"><b>Merci&nbsp;!</b> C'est noté, à très vite.</p>
+            <p class="fine">Une question en attendant&nbsp;? <a href="mailto:contact@acha-company.fr">contact@acha-company.fr</a></p>
+          </div>
+        </div>
+
+        <footer>
+          <span>© {{year}} ACHA COMPANY · Créer, vendre, grandir, recommencer.</span>
+          <a href="/mentions-legales">Mentions légales et confidentialité</a>
+        </footer>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function () {
+  var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var page = document.getElementById("page");
+
+  // halo qui suit la souris
+  page.addEventListener("pointermove", function (e) {
+    page.style.setProperty("--mx", e.clientX + "px");
+    page.style.setProperty("--my", e.clientY + "px");
+  });
+
+  // mot qui change dans le titre
+  var words = ["beau.", "solide.", "élégant.", "nouveau."], wi = 0, word = document.getElementById("word");
+  // un mot par case du logo, à tour de rôle
+  var tiles = document.querySelectorAll("#tiles li"), ti = 0;
+
+  // le site se construit pièce par pièce
+  var pieces = document.querySelectorAll("#pieces .pc"), svg = document.querySelector(".scene svg");
+  var steps = ["On pose les fondations…", "On dessine les pages…", "On choisit les couleurs…", "On écrit les textes…", "On peaufine les détails…", "Presque prêt…"];
+  var stepEl = document.getElementById("step"), fill = document.getElementById("fill"), pct = document.getElementById("pct");
+  var n = 0;
+
+  function show(k) {
+    var p = Math.round(k / pieces.length * 96);
+    fill.style.width = p + "%";
+    pct.textContent = p + " %";
+    stepEl.textContent = steps[Math.min(steps.length - 1, Math.floor(k / pieces.length * steps.length))];
+  }
+
+  // envoi du formulaire sans quitter la page
+  var form = document.getElementById("form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var btn = form.querySelector("button");
+    btn.disabled = true;
+    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(new FormData(form)).toString() })
+      .then(function (r) { if (!r.ok) throw r; document.getElementById("notify").classList.add("sent"); })
+      .catch(function () { btn.disabled = false; window.location.href = "mailto:contact@acha-company.fr?subject=Me%20pr%C3%A9venir%20de%20l%27ouverture"; });
+  });
+
+  if (still) { pieces.forEach(function (p) { p.classList.add("on"); }); show(pieces.length); return; }
+
+  setInterval(function () {
+    var cur = word.firstElementChild;
+    cur.classList.add("out");
+    setTimeout(function () {
+      wi = (wi + 1) % words.length;
+      var s = document.createElement("span");
+      s.className = "in"; s.textContent = words[wi];
+      word.replaceChild(s, cur);
+      s.getBoundingClientRect();
+      s.className = "";
+    }, 450);
+  }, 2600);
+
+  setInterval(function () {
+    tiles.forEach(function (t, i) { t.classList.toggle("on", i === ti); });
+    ti = (ti + 1) % tiles.length;
+  }, 1300);
+
+  function tick() {
+    if (n < pieces.length) {
+      pieces[n].classList.add("on");
+      n++; show(n);
+      setTimeout(tick, 900);
+    } else {
+      setTimeout(function () {
+        svg.classList.add("reset");
+        pieces.forEach(function (p) { p.classList.remove("on"); });
+        n = 0; show(0);
+        setTimeout(function () { svg.classList.remove("reset"); tick(); }, 900);
+      }, 3200);
+    }
+  }
+  setTimeout(tick, 700);
+
+})();
+</script>
+</body>
+</html>

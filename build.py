@@ -14,6 +14,10 @@ nav: studio            (lien du menu à marquer comme page courante, facultatif)
 path: /studio          (adresse publique, facultatif)
 robots: noindex        (page à ne pas référencer, facultatif)
 -->
+Mode « bientôt » (COMING_SOON = True) : l'accueil devient la page src/bientot/index.html
+et seules les pages de KEEP sont publiées ; les autres adresses renvoient vers l'accueil
+(public/_redirects). Les pages du site complet restent dans src/pages/ : pour les remettre
+en ligne, passer COMING_SOON à False.
 Lancer : python3 build.py
 """
 import datetime
@@ -27,6 +31,9 @@ import unicodedata
 
 ROOT = pathlib.Path(__file__).parent
 SRC, OUT, CONTENT = ROOT / "src", ROOT / "public", ROOT / "content"
+
+COMING_SOON = True
+KEEP = {"mentions-legales", "merci", "espace-client", "espace-client-admin"}
 
 NAV = [
     ("groupe", "/#groupe", "Le groupe"),
@@ -138,6 +145,8 @@ def main():
     assets = b"".join((ROOT / "static" / "assets" / f).read_bytes() for f in ("style.css", "site.js", "devis.js", "espace.js", "espace-admin.js", "espace-config.js"))
     version = hashlib.sha1(assets).hexdigest()[:10]
     for page in sorted((SRC / "pages").glob("*.html")):
+        if COMING_SOON and page.stem not in KEEP:
+            continue
         meta, body = parse(page.read_text(encoding="utf-8"))
         data = load(f"textes/{page.stem}.json") if (CONTENT / "textes" / f"{page.stem}.json").exists() else {}
         body = fill_texts(body, {x["id"]: x["texte"] for x in data.get("textes", [])}, page.stem)
@@ -157,6 +166,12 @@ def main():
                 .replace("{{v}}", version))
         (OUT / page.name).write_text(out, encoding="utf-8")
         print("ok", page.name)
+    if COMING_SOON:
+        soon = (SRC / "bientot" / "index.html").read_text(encoding="utf-8")
+        (OUT / "index.html").write_text(soon.replace("{{year}}", year), encoding="utf-8")
+        # toute adresse sans fichier (anciennes pages, liens partagés) renvoie vers l'accueil
+        (OUT / "_redirects").write_text("/*  /  302\n", encoding="utf-8")
+        print("ok index.html (bientôt)")
 
 
 if __name__ == "__main__":
